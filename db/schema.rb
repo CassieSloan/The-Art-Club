@@ -10,10 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_29_012340) do
+ActiveRecord::Schema.define(version: 2019_10_29_014005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contents", force: :cascade do |t|
+    t.boolean "artwork"
+    t.string "title"
+    t.bigint "medium_id"
+    t.integer "price"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["medium_id"], name: "index_contents_on_medium_id"
+    t.index ["user_id"], name: "index_contents_on_user_id"
+  end
+
+  create_table "contents_genres", force: :cascade do |t|
+    t.bigint "content_id"
+    t.bigint "genre_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["content_id"], name: "index_contents_genres_on_content_id"
+    t.index ["genre_id"], name: "index_contents_genres_on_genre_id"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "media", force: :cascade do |t|
+    t.string "material"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +56,15 @@ ActiveRecord::Schema.define(version: 2019_10_29_012340) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "username"
+    t.text "bio"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "contents", "media"
+  add_foreign_key "contents", "users"
+  add_foreign_key "contents_genres", "contents"
+  add_foreign_key "contents_genres", "genres"
 end
