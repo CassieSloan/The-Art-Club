@@ -4,46 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Welcome</title>
 </head>
-<body>
 
-    <h1>Welcome to The Art Club</h1>
-    <button>Continue as guest</button>
-    <h1>OR</h1>
+<body id="welcome_page">
+
+    <h1>Welcome to</h1>
+    <h1>The Art Club</h1>
+    <button type="submit">Continue as guest</button>
+    
+    <h3>OR</h3>
 
     <!--sign up form -->
     <div>
-        <form>
-            <div class="container">
-                <h3>Join The Art Club!</h3>
-                <p>Please fill in this form to create an account.</p>
+       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
 
-                <div>
-                    <label for="username">Username</label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
-                </div>
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" placeholder="Enter Name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
-                </div>
-                <div>
-                    <label for="psw">Password</label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                </div>
-                <div>
-                    <label for="psw-repeat">Repeat Password</label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                </div>
-                <div class="join_button">
-                    <button type="submit" class="signupbtn">Sign Up</button>
-                </div>
-            </div>
-        </form>
-    
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+    <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+    </div>
 </body>
 </html>

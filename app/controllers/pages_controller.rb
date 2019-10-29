@@ -4,7 +4,6 @@ class PagesController < ApplicationController
     end
 
     def home
-        render plain: "hello this is welcome"
     end
 
 end
