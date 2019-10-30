@@ -1,0 +1,28 @@
+#explore_page {
+    // body {
+    //     div {
+            .medium-image {
+                width: 40%;
+                height: 120px;
+                background-image: url("app/assets/images/paintbrushes_2.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .genre-image {
+                width: 40%;
+                height: 120px;
+                background-color: rgb(255, 0, 0)
+            }
+            .artist-image {
+                width: 40%;
+                height: 120px;
+                background-color: rgb(0, 0, 255)
+            }
+            .all-image {
+                width: 40%;
+                height: 120px;
+                background-color: rgb(0, 136, 0)
+            }
+    //     }
+    // }
+}
