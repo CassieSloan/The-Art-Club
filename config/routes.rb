@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get "/results/medium", to: "mediums#index", as: "mediums"
   get "/results/artists", to: "artists#index", as: "artists"
   get "/contact", to: "pages#contact", as: "contact"
+  get "/sell", to: "pages#sell", as: "sell"
+  post "/sell/new", to: "pages#create"
 end
