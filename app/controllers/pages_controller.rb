@@ -16,6 +16,9 @@ class PagesController < ApplicationController
     def show
     end
 
+    def payment_success
+    end
+
     def contact
     end
 
@@ -30,6 +33,8 @@ class PagesController < ApplicationController
 
     def profile_edit
     end
+
+
 
 
 
