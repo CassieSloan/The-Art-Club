@@ -12,11 +12,15 @@
 
     <h1>this is the explore page</h1>
 
-
-    <div class="medium-image">Medium</div>
-    <div class="genre-image">Genre</div>
-    <div class="artist-image">Artist</div>
-    <div class="all-image">All</div>
+    <div class="flexbox">
+        <%= link_to genres_path do %>
+            <div class="medium-image">Medium</div>
+        <%end%>
+        <!-- <div class="medium-image">Medium</div> -->
+        <div class="genre-image">Genre</div>
+        <div class="artist-image">Artist</div>
+        <div class="all-image">All</div>
+    </div>
     
 </body>
 </html>

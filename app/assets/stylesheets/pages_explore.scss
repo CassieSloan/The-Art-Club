@@ -1,28 +1,49 @@
 #explore_page {
     // body {
     //     div {
+        .flexbox {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+        
             .medium-image {
-                width: 40%;
-                height: 120px;
-                background-image: url("app/assets/images/paintbrushes_2.jpeg");
+                width: 10em;
+                height: 10em;
+                background-image: image-url("paintbrushes_2.jpeg");
                 background-size: cover;
                 background-repeat: no-repeat;
             }
             .genre-image {
-                width: 40%;
-                height: 120px;
+                width: 10em;
+                height: 10em;
                 background-color: rgb(255, 0, 0)
             }
             .artist-image {
-                width: 40%;
-                height: 120px;
+                width: 10em;
+                height: 10em;
                 background-color: rgb(0, 0, 255)
             }
             .all-image {
-                width: 40%;
-                height: 120px;
+                width: 10em;
+                height: 10em;
                 background-color: rgb(0, 136, 0)
             }
+        }
     //     }
     // }
 }
+        //breakpoints
+        @media screen and (min-width: 600px) {
+            .desktop_nav{
+                display: block;
+            }
+            .flexbox {
+                display: inline-block;
+                div {
+                    margin: 1%;
+                }
+            }
+        }
+            
