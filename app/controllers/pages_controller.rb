@@ -11,7 +11,9 @@ class PagesController < ApplicationController
     end
 
     def results_all
+    end
 
+    def show
     end
 
     def contact
@@ -28,5 +30,7 @@ class PagesController < ApplicationController
 
     def profile_edit
     end
+
+
 
 end
