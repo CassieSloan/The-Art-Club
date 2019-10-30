@@ -8,5 +8,4 @@ Rails.application.routes.draw do
   get "/results/genres", to: "genres#index", as: "genres"
   get "/results/medium", to: "mediums#index", as: "mediums"
   get "/results/artists", to: "artists#index", as: "artists"
-  
 end

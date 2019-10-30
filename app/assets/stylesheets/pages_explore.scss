@@ -18,17 +18,23 @@
             .genre-image {
                 width: 10em;
                 height: 10em;
-                background-color: rgb(255, 0, 0)
+                background-image: image-url("comics.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
             }
             .artist-image {
                 width: 10em;
                 height: 10em;
-                background-color: rgb(0, 0, 255)
+                background-image: image-url("paintman.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
             }
             .all-image {
                 width: 10em;
                 height: 10em;
-                background-color: rgb(0, 136, 0)
+                background-image: image-url("paint_on_canvas.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
             }
         }
     //     }
