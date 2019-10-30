@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get "/contact", to: "pages#contact", as: "contact"
   get "/sell", to: "pages#sell", as: "sell"
   post "/sell/new", to: "pages#create"
+  get "/profile", to: "pages#profile", as: "profile"
+  post "profile/edit", to: "pages#profile_edit"
 end

@@ -22,5 +22,11 @@ class PagesController < ApplicationController
 
     def create
     end
-    
+
+    def profile
+    end
+
+    def profile_edit
+    end
+
 end
