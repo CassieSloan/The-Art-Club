@@ -11,10 +11,9 @@ class PagesController < ApplicationController
     end
 
     def results_all
-        genre = Genre.title
-        artist = User.name
-        medium = Medium.material
-        price = Content.price
-        artwork = Content.title
+
+    end
+
+    def contact
     end
 end
