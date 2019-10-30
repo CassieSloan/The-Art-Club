@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   get "/explore", to: "pages#explore", as: "explore"
   get "/results", to: "pages#results_all", as: "results_all"
   get "/results/genres", to: "genres#index", as: "genres"
+  get "/results/medium", to: "mediums#index", as: "mediums"
+  get "/results/artists", to: "artists#index", as: "artists"
+  
 end
