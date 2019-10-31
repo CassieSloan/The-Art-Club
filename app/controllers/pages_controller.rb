@@ -11,6 +11,7 @@ class PagesController < ApplicationController
     end
 
     def results_all
+        @artworks_all = Content.all
     end
 
     def show
@@ -33,6 +34,10 @@ class PagesController < ApplicationController
 
     def profile_edit
     end
+
+    # def artwork_params
+    #     params.require(:listing).permit(:title, :price, :genre, :medium)
+    # end
 
 
 

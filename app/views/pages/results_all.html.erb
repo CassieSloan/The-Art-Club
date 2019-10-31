@@ -1,17 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact us</title>
-</head>
-<body>
-    <!-- insert nav bar here -->
-    <!-- search by catagory at top -->
-    <h1> this is the all results page</h1>
-    <nav>
 
-    </nav>
-</body>
+    <!-- insert nav bar here -->
+    <nav class="category-search">
+    <%= link_to "genre", genres_path%>
+    <%= link_to "artist", artists_path%>
+    <%= link_to "medium", mediums_path%>
+
+    <!-- search by catagory (selected by user on previous screen) at top -->
+    </nav>    
+    
+    <p>
+    <% @artworks_all.each do |artwork| %>
+    <%= artwork[:title] %>
+    <% end %>
+    <!-- this is how to list all data -->
+    </p>
+    <h1> this is the all results page</h1>
+
+
+
+    <!-- picture for artwork -->
+    <!-- title for artwork -->
+    <!-- price for artwork -->
+    <!-- repeat -->
+
 </html>

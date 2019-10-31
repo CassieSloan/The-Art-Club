@@ -5,12 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-for i in 1..30
-    artwork = Content.create(
-        price: rand(500..10000),
-        title: Faker::Music.album,
-    )
-end
 
 for i in 1..30
     user = User.create(
@@ -22,14 +16,35 @@ for i in 1..30
     )
 end
 
+user_ids = User.all.pluck(:id)
+
 for i in 1..30
     genre = Genre.create(
         title: Faker::Book.genre
     )
 end
 
+genres = Genre.all
+
 for i in 1..30
     medium = Medium.create(
         material: Faker::Construction.material,
     )
 end
+
+medium_ids = Medium.all.pluck(:id)
+
+for i in 1..30
+    artwork = Content.new(
+        artwork: [true, false].sample, 
+        price: rand(500..10000),
+        title: Faker::Music.album,
+        user_id: user_ids.sample,
+        medium_id: medium_ids.sample
+    )
+    3.times do 
+        artwork.genres << genres.sample
+    end
+    artwork.save!
+end
+

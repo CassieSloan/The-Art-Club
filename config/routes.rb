@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get "/payment-successful", to: "pages#payment_success", as: "payment_success"
   get "/contact", to: "pages#contact", as: "contact"
   get "/sell", to: "pages#sell", as: "sell"
-  post "/sell/", to: "pages#create"
+  post "/sell", to: "pages#create"
   get "/profile", to: "pages#profile", as: "profile"
-  put "profile/", to: "pages#profile_edit"
+  put "/profile", to: "pages#profile_edit"
 end
