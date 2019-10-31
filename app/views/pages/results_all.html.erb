@@ -10,20 +10,15 @@
 
     <!-- search by catagory (selected by user on previous screen) at top -->
     </nav>    
-    
-    <p>
+
     <% @artworks_all.each do |artwork| %>
-    <%= artwork[:title] %>
-    <%= artwork[:pic] %> 
-    <%= artwork[:price] %>
+
+    <div>
+        <%= image_tag artwork.pic if artwork.pic.attached? %>
+        <h2><%= artwork.title %></h2>
+        <p><%= number_to_currency(artwork.price / 100.0) %></p>
+    </div>
     <% end %>
+
     <!-- this is how to list all data -->
-    </p>
-
-
-
-    <!-- picture for artwork -->
-    <!-- title for artwork -->
-    <!-- price for artwork -->
-    <!-- repeat -->
 
