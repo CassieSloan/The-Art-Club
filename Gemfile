@@ -68,3 +68,5 @@ gem "aws-sdk-s3", "~> 1.52"
 gem "faker", "~> 2.6"
 
 gem "normalize-rails", "~> 4.1"
+
+gem "down", "~> 5.0"

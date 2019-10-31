@@ -1,4 +1,7 @@
 
+<h1> this is the all results page</h1>
+
+    
     <!-- insert nav bar here -->
     <nav class="category-search">
     <%= link_to "genre", genres_path%>
@@ -11,10 +14,11 @@
     <p>
     <% @artworks_all.each do |artwork| %>
     <%= artwork[:title] %>
+    <%= artwork[:pic] %> 
+    <%= artwork[:price] %>
     <% end %>
     <!-- this is how to list all data -->
     </p>
-    <h1> this is the all results page</h1>
 
 
 
@@ -23,4 +27,3 @@
     <!-- price for artwork -->
     <!-- repeat -->
 
-</html>
