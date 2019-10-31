@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   get "/results", to: "pages#results_all", as: "results_all"
   get "/results/genres", to: "genres#index", as: "genres"
   get "/results/genres/:id", to: "genres#filter"
-  get "/results/medium", to: "mediums#index", as: "mediums"
+  get "/results/mediums", to: "mediums#index", as: "mediums"
   get "/results/artists", to: "artists#index", as: "artists"
   # buy page (when artwork clicked on)
-  get "/results/:id/:id/:id", to: "pages#show", as: "artwork"
+  #get "/results/:id/:id/:id", to: "pages#show", as: "artwork"
 
   get "/payment-successful", to: "pages#payment_success", as: "payment_success"
   get "/contact", to: "pages#contact", as: "contact"

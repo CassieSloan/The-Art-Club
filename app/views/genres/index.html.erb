@@ -1,1 +1,27 @@
-<h1>thi is all the genres!</h1>
+
+
+ <!-- insert nav bar here -->
+ <div>
+
+    <h1>thi is all the genres!</h1>
+
+    <nav class="category-search">
+        <% @genres_all.each do |genre| %>
+        <p><%=genre.title%></p>
+        <%end%>
+
+
+    <!-- search by catagory (selected by user on previous screen) at top -->
+    </nav>    
+
+    <% @artworks_all.each do |artwork| %>
+
+    <div>
+        <%= image_tag artwork.pic if artwork.pic.attached? %>
+        <h2><%= artwork.title %></h2>
+        <p><%= number_to_currency(artwork.price / 100.0) %></p>
+    </div>
+    
+    <% end %>
+
+</div>

@@ -1,1 +1,21 @@
-<h1>this is the mediums!</h1>
+<div>
+    <h1>this is the mediums!</h1>
+
+    <nav class="category-search">
+        <% @mediums_all.each do |medium| %>
+        <p><%=medium.material%></p>
+        <%end%>
+
+    <!-- search by catagory (selected by user on previous screen) at top -->
+    </nav>    
+
+    <% @artworks_all.each do |artwork| %>
+
+    <div>
+        <%= image_tag artwork.pic if artwork.pic.attached? %>
+        <h2><%= artwork.title %></h2>
+        <p><%= number_to_currency(artwork.price / 100.0) %></p>
+    </div>
+    
+    <% end %>
+</div>

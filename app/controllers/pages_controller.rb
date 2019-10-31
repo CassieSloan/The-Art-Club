@@ -11,7 +11,7 @@ class PagesController < ApplicationController
     end
 
     def results_all
-        @artworks_all = Content.all
+        @artworks_all = Content.all #collects all artwork data and stores in instand variable @artworks_all
     end
 
     def show

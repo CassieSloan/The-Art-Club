@@ -43,8 +43,10 @@ for i in 1..30
         medium_id: medium_ids.sample
 
     )
+    
     temp_art_pic = Down.download(Faker::LoremPixel.image(category:"abstract"))
     artwork.pic.attach(io:temp_art_pic, filename: File.basename(temp_art_pic.path))
+    
     3.times do 
         artwork.genres << genres.sample
     end
