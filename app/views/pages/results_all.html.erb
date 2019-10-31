@@ -1,25 +1,26 @@
+<main id="results">
 
-<h1> this is the all results page</h1>
 
-    
-    <!-- insert nav bar here -->
-    <nav class="category-search">
-    <%= link_to "genre", genres_path%>
-    <%= link_to "artist", artists_path%>
-    <%= link_to "medium", mediums_path%>
+    <h1> this is the all results page</h1>
 
-    <!-- search by catagory (selected by user on previous screen) at top -->
-    </nav>    
+        <!-- insert nav bar here -->
+        <nav class="category-search">
+        <%= link_to "genre", genres_path%>
+        <%= link_to "artist", artists_path%>
+        <%= link_to "medium", mediums_path%>
 
-<div class="flexbox">
-    <% @artworks_all.each do |artwork| %>
+        <!-- search by catagory (selected by user on previous screen) at top -->
+        </nav>    
 
-    <div class="listing">
-        <%= image_tag artwork.pic if artwork.pic.attached? %>
-        <h2><%= artwork.title %></h2>
-        <p><%= number_to_currency(artwork.price / 100.0) %></p>
+    <div class="flexbox">
+        <% @artworks_all.each do |artwork| %>
+        <!-- this is how to list all data -->
+        <div class="listing">
+            <%= image_tag artwork.pic if artwork.pic.attached? %>
+            <h2><%= artwork.title %></h2>
+            <p><%= number_to_currency(artwork.price / 100.0) %></p>
+        </div>
+        <% end %>
     </div>
-    <% end %>
 
-    <!-- this is how to list all data -->
-</div>
+</main>

@@ -6,5 +6,6 @@ class GenresController < ApplicationController
     end
 
     def filter
+        @genre = Genre.find(params[:id])
     end
 end
