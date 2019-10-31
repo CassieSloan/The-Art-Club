@@ -1,1 +1,11 @@
 <h1>this is the artists results!</h1>
+
+<% @artists_all.each do |artist| %>
+
+    <div>
+        <%= image_tag artist.pic if artist.pic.attached? %>
+        <h2><%= artist.username %></h2>
+        <p><%= artist.bio %></p>
+    </div>
+    
+    <% end %>

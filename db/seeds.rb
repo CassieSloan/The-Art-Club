@@ -14,6 +14,11 @@ for i in 1..30
         email: Faker::Internet.email,
         password: Faker::Internet.password(min_length: 8)
     )
+    temp_user_pic = Down.download(Faker::LoremPixel.image(category:"people"))
+    user.pic.attach(io:temp_user_pic, filename: File.basename(temp_user_pic.path))
+    
+    user.save!
+    puts "created #{i} user"
 end
 
 user_ids = User.all.pluck(:id)
@@ -23,6 +28,7 @@ for i in 1..30
         title: Faker::Book.genre
     )
 end
+    
 
 genres = Genre.all
 

@@ -1,11 +1,10 @@
 #explore_page {
-    // body {
-    //     div {
-        .flexbox {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
+
+    .flexbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
             
         
             .medium-image {
@@ -36,9 +35,8 @@
                 background-size: cover;
                 background-repeat: no-repeat;
             }
-        }
-    //     }
-    // }
+    }
+    
 }
         //breakpoints
         @media screen and (min-width: 600px) {

@@ -1,0 +1,20 @@
+#results {
+
+    .flexbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+            
+        
+            .listing {
+                width: 10em;
+                height: 10em;
+                background-image: image-url("paintbrushes_2.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+    }
+    
+}
