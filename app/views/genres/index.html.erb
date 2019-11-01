@@ -7,7 +7,9 @@
 
     <nav class="category-search">
         <% @genres_all.each do |genre| %>
-        <p><%=genre.title%></p>
+            <%=link_to genre_path(genre.id) do %>
+              <p><%=genre.title%></p>
+            <%end%>
         <%end%>
         <!-- sshow artwork and price associated with selected genre -->
 

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # explore results
   get "/results/all", to: "pages#results_all", as: "results_all"
   get "/results/genres", to: "genres#index", as: "genres"
-  get "/results/genres/:id", to: "genres#filter"
+  get "/results/genres/:id", to: "genres#filter", as: "genre"
   get "/results/mediums", to: "mediums#index", as: "mediums"
   get "/results/mediums/:id", to: "mediums#filter"
   get "/results/artists", to: "artists#index", as: "artists"
@@ -26,9 +26,11 @@ Rails.application.routes.draw do
   #sell
   get "/sell", to: "contents#new", as: "new_content"
   post "/sell", to: "contents#create"
+  patch "/sell/:id", to: "contents#update"
+
 
 
   get "/profile", to: "pages#profile", as: "profile"
-  put "/profile", to: "pages#profile_edit"
+  patch "/profile", to: "pages#profile_edit"
 
 end

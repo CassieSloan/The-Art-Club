@@ -10,13 +10,27 @@ class ContentsController < ApplicationController
         @artwork = current_user.contents.create(content_params)
         
         if @artwork.errors.any?
+            @genres = Genre.all
+            @mediums = Medium.all 
             render "new"
         else 
-            redirect_to results_all_path
+            redirect_to artwork_path(params[:id])
         end
     end
 
     def edit
+        @genres = Genre.all
+        @mediums = Medium.all    
+    end
+
+    def update        
+        if @content.update(content_params)
+            redirect_to artwork_path(params[:id])
+        else
+            @genres = Genre.all
+            @mediums = Medium.all             
+            render "edit"
+        end
     end
 
     def delete

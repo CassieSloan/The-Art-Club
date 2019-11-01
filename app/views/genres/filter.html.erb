@@ -1,3 +1,5 @@
 <% @genre.contents.each do |content| %>
-<p> <%= content.title %></p>
+<h2><%= content.title %></h2>
+<%= image_tag content.pic if content.pic.attached? %>
+<p><%= number_to_currency(content.price / 100.0) %></p>
 <%end%> 

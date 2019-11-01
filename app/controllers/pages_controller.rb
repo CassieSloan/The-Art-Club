@@ -23,12 +23,6 @@ class PagesController < ApplicationController
     def contact
     end
 
-    def sell
-    end
-
-    def create
-    end
-
     def profile
     end
 
