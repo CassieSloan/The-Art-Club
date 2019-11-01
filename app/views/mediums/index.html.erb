@@ -1,10 +1,14 @@
-<div>
-    <h1>this is the mediums!</h1>
+ <div id="mediums">
+
+    <h1>this is all the mediums!</h1>
 
     <nav class="category-search">
         <% @mediums_all.each do |medium| %>
-        <p><%=medium.material%></p>
+            <%=link_to medium_path(medium.id) do %>
+              <p><%=medium.material%></p>
+            <%end%>
         <%end%>
+        <!-- sshow artwork and price associated with selected medium -->
 
     <!-- search by catagory (selected by user on previous screen) at top -->
     </nav>    
@@ -18,4 +22,5 @@
     </div>
     
     <% end %>
+
 </div>

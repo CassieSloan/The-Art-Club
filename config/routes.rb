@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get "/results/genres", to: "genres#index", as: "genres"
   get "/results/genres/:id", to: "genres#filter", as: "genre"
   get "/results/mediums", to: "mediums#index", as: "mediums"
-  get "/results/mediums/:id", to: "mediums#filter"
+  get "/results/mediums/:id", to: "mediums#filter", as: "medium"
   get "/results/artists", to: "artists#index", as: "artists"
 
   # buy page (when artwork clicked on)
