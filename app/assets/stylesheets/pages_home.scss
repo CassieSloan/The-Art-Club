@@ -1,26 +1,29 @@
 
 #home_page {
-    body {
+    
+    background-color: red;
+    height: 100vh;
+    
 
-        .nav_bar {
-            width: 100%;
-            margin-top: 5%;
-            // .search {
-            // width: 50%;
-            // height: 80px;
-            // border: solid black 3px;
-            // border-radius: 0.5em;
-            // margin: auto;
-            // font-size: 300%;
-            // }
-            .desktop_nav {
+    .nav_bar {
+        width: 100%;
+        margin-top: 5%;
+
+        .desktop_nav {
             display: none;
             }
+    }
 
-        }
-        
+    .buy-image {
+        background-image: image-url("buy-image.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 30vw;
 
     }
+        
+
+    
 }
 
         //breakpoints

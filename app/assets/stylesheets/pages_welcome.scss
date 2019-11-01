@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
 #welcome_page {
 
         .background-image {
@@ -15,6 +16,10 @@
         h1 {
             text-align: center;
             margin-top: 0;
+            font-family: 'Fredericka the Great', cursive;
+            color: rgb(255, 255, 255);
+            text-shadow: black 2px 2px;
+
         }
         h2 {
             text-align: center;
@@ -31,7 +36,15 @@
         button {
             text-align: center;
         }
-    
+    .signup {
+        background-color: rgb(247, 226, 226);
+        padding: 5%;
+        width: 50%;
+        margin: auto;
+        line-height: 150%;
+        border-radius: 1em;
+    }
+
 }
 
 
