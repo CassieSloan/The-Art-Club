@@ -3,12 +3,13 @@
  <!-- insert nav bar here -->
  <div>
 
-    <h1>thi is all the genres!</h1>
+    <h1>this is all the genres!</h1>
 
     <nav class="category-search">
         <% @genres_all.each do |genre| %>
         <p><%=genre.title%></p>
         <%end%>
+        <!-- sshow artwork and price associated with selected genre -->
 
     <!-- search by catagory (selected by user on previous screen) at top -->
     </nav>    

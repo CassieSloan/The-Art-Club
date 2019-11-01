@@ -1,0 +1,28 @@
+<h1> got artwork to sell? do it here! </h1>
+
+
+<%= form_with model: @content, local: true do |form| %>
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+        <div>
+        <%= form.label :price, "Price (in cents)" %>
+        <%= form.number_field :price, min: 0 %>
+    </div>
+    <div>
+        <%= form.label :pic %>
+        <%= form.file_field :pic, accept: "image/png,image/gif,image/jpeg,image/jpg" %>
+    </div>
+    <div>
+        <%= form.label :genre %>
+        <%= form.collection_check_boxes :genre_ids, @genres, :id, :title %>
+    </div>
+        <div>
+        <%= form.label :medium %>
+        <%= form.collection_check_boxes :medium_ids, @mediums, :id, :material %>
+    </div>
+
+
+    <%= form.submit %>
+<% end %>

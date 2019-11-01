@@ -5,4 +5,7 @@ class MediumsController < ApplicationController
         @mediums_all = Medium.all #collects all medium data and stores in instance variable @mediums_all
     end
 
+    def filter
+        @medium = Medium.find(params[:id])
+    end
 end
