@@ -2,25 +2,41 @@
 <div id="explore_page">
     <!-- insert nav bar here -->
 
-    <h1>this is the explore page</h1>
+    <h1>Explore</h1>
 
     <div class="flexbox">
-        
-        <%= link_to mediums_path do %>
-            <div class="medium-image">Medium</div>
-        <%end%>
 
-        <%= link_to genres_path do %>
-            <div class="genre-image">Genre</div>
-        <%end%>
+        <div class="medium-image">
+            <%= link_to mediums_path do %>
+                <div>
+                    <p>Medium</p>
+                </div>
+            <%end%>
+        </div>
 
-        <%= link_to artists_path do %>
-            <div class="artist-image">Artist</div>
-        <%end%>
+        <div class="genre-image">
+            <%= link_to genres_path do %>
+                <div>
+                    <p>Genre</p>
+                </div>
+            <%end%>
+        </div>
 
-        <%= link_to results_all_path do %>
-            <div class="all-image">All</div>
-        <%end%>
+        <div class="artist-image">
+            <%= link_to artists_path do %>
+                <div>
+                    <p>Artist</p>
+                </div>
+            <%end%>
+        </div>
+
+        <div class="all-image">
+            <%= link_to results_all_path do %>
+                <div>
+                    <p>All</p>
+                </div>
+            <%end%>
+        </div>
 
     </div>
 </div>
