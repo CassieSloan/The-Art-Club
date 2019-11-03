@@ -1,26 +1,27 @@
- <div id="mediums">
+<!-- insert nav bar here -->
+<div id="mediums-index">
 
     <h1>this is all the mediums!</h1>
 
     <nav class="category-search">
-        <% @mediums_all.each do |medium| %>
-            <%=link_to medium_path(medium.id) do %>
-              <p><%=medium.material%></p>
+        <div class="nav-element">
+            <% @mediums_all.each do |medium| %>
+                <%=link_to medium_path(medium.id), :class => "link-to" do %>
+                <p><%=medium.material%></p>
+                <%end%>
             <%end%>
-        <%end%>
-        <!-- sshow artwork and price associated with selected medium -->
-
-    <!-- search by catagory (selected by user on previous screen) at top -->
+        </div>
     </nav>    
 
     <% @artworks_all.each do |artwork| %>
 
-    <div>
-        <%= image_tag artwork.pic if artwork.pic.attached? %>
-        <h2><%= artwork.title %></h2>
-        <p><%= number_to_currency(artwork.price / 100.0) %></p>
-    </div>
-    
+        <div class="flexbox">
+            <div class="listings">
+                <%= image_tag artwork.pic if artwork.pic.attached? %>
+                <h2><%= artwork.title %></h2>
+                <p><%= number_to_currency(artwork.price / 100.0) %></p>
+            </div>
+        </div>
     <% end %>
 
 </div>

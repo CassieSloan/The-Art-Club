@@ -1,7 +1,25 @@
-<% @medium.contents.each do |content| %>
-<h2><%= content.title %></h2>
-<%= image_tag content.pic if content.pic.attached? %>
-<p><%= number_to_currency(content.price / 100.0) %></p>
-<%end%> 
+<!-- insert nav bar here -->
 
-<!-- need medium join table for contents -->
+<div id="medium-filter">
+
+    <nav class="category-search">
+        <div class="nav-element">
+            <% @mediums_all.each do |medium| %>
+                <%=link_to medium_path(medium.id), :class => "link-to" do %>
+                <p><%=medium.material%></p>
+                <%end%>
+            <%end%>
+        </div>
+    </nav>  
+
+    <div class="flexbox">
+        <% @medium.contents.each do |content| %>
+            <div class="listings">
+                <h2><%= content.title %></h2>
+                <%= image_tag content.pic if content.pic.attached? %>
+                <p><%= number_to_currency(content.price / 100.0) %></p>
+            </div>
+        <%end%> 
+    </div>    
+
+</div>
