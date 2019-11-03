@@ -70,3 +70,5 @@ gem "faker", "~> 2.6"
 gem "normalize-rails", "~> 4.1"
 
 gem "down", "~> 5.0"
+
+gem "stripe", "~> 5.7"
