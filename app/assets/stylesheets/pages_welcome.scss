@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap');
+
 #welcome_page {
 
     .background-image {
@@ -10,57 +11,101 @@
         position: absolute;
         z-index: -1;
     }
+    .flexbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        .guest {
+            // display: inline;
+            // margin: auto;
+            width: 10vw;
+            .link-to {
+                display: inline;
+                text-align: center;
+                background-color: #4DCCBD;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                padding: 2%;
+                border-radius: 0.5em;
+                font-family: 'Open Sans', sans-serif;
+                // margin: auto;
+            }
+        }
+        //text formatting
+        // sign up section
+        .signup {
+            background-color: rgb(247, 226, 226);
+            padding: 5%;
+            width: 70%;
+            margin: auto;
+            line-height: 150%;
+            border-radius: 1em;
+            font-family: 'Open Sans', sans-serif;
+            
+            //text boxes 
+            .field {
+                text-align: center;
 
-    //text formatting
+            }
+            // sign up button
+            .actions {
+                text-align: center;
+                margin-top: 5%;
+            }
+        }
+    
+    }   
 
     h1 {
         text-align: center;
         margin-top: 5%;
-        font-family: 'Fredoka One', cursive;
+        font-family: 'Racing Sans One', cursive;
         color: rgb(255, 255, 255);
         text-shadow: black 2px 2px;
         letter-spacing: 0.075em;
-
     }
     h2 {
         text-align: center;
+        color: rgb(255, 255, 255);
+        font-family: 'Open Sans', sans-serif;
+
+
     }
     h3 {
         text-align: center;
+        color: rgb(255, 255, 255);
+        font-family: 'Open Sans', sans-serif;
+
+
     }
     h4 {
         text-align: center;
+        color: #4DCCBD;
+        font-family: 'Open Sans', sans-serif;
     }
-    p {
-        text-align: left;
-    }
+
     
-    //button formatting
-
-    .button {
-        display: inline;
-        text-align: center;
-        background-color: rgb(48, 144, 253);
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-
-        }
-    .signup {
-        background-color: rgb(247, 226, 226);
-        padding: 5%;
-        width: 70%;
-        margin: auto;
-        line-height: 150%;
-        border-radius: 1em;
-        .field {
-            text-align: center;
-        }
-    }
-
 }
 
 
 //breakpoints
+
 @media screen and (min-width: 320px) {
+    .signup {
+        max-width: 50vw;
+    }
+
+}
+@media screen and (min-width: 550px) {
+    .flexbox {
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+    .signup {
+        max-width: 30vw;
+    }
 
 }
