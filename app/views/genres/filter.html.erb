@@ -1,5 +1,22 @@
-<% @genre.contents.each do |content| %>
-<h2><%= content.title %></h2>
-<%= image_tag content.pic if content.pic.attached? %>
-<p><%= number_to_currency(content.price / 100.0) %></p>
-<%end%> 
+<!-- insert nav bar here -->
+
+<div id="genre-filter">
+
+    <nav class="category-search">
+        <% @genres_all.each do |genre| %>
+            <%=link_to genre_path(genre.id) do %>
+              <p><%=genre.title%></p>
+            <%end%>
+        <%end%>
+    </nav>  
+
+    <div class="flexbox">
+        <% @genre.contents.each do |content| %>
+            <div class="listings">
+                <%= image_tag content.pic if content.pic.attached? %>
+                <h2><%= content.title %></h2>
+                <p><%= number_to_currency(content.price / 100.0) %></p>
+            </div>
+        <%end%> 
+    </div>
+</div>

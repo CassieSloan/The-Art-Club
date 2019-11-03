@@ -7,5 +7,7 @@ class GenresController < ApplicationController
 
     def filter
         @genre = Genre.find(params[:id])
+        @genres_all = Genre.all #collects all genre data and stores in instance variable @genres_all
+
     end
 end

@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap');
-
-#genre-index {
+#genre-filter {
     background-color: #4DCCBD;
     width: 100%;
 
@@ -15,10 +13,11 @@
         font-weight: 400;
         text-decoration: none;
         padding: 3%;
+
     }
 
     h2 {
-        font-size: 10vw;
+        font-size: 5vw;
         color: rgb(255, 255, 255);
     }
 
