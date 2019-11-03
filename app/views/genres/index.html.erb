@@ -1,7 +1,7 @@
 
 
  <!-- insert nav bar here -->
- <div>
+ <div id="genre-index">
 
     <h1>this is all the genres!</h1>
 
@@ -11,18 +11,17 @@
               <p><%=genre.title%></p>
             <%end%>
         <%end%>
-        <!-- sshow artwork and price associated with selected genre -->
-
-    <!-- search by catagory (selected by user on previous screen) at top -->
     </nav>    
 
     <% @artworks_all.each do |artwork| %>
 
-    <div>
-        <%= image_tag artwork.pic if artwork.pic.attached? %>
-        <h2><%= artwork.title %></h2>
-        <p><%= number_to_currency(artwork.price / 100.0) %></p>
-    </div>
+        <div class="flexbox">
+            <div class="listings">
+                <%= image_tag artwork.pic if artwork.pic.attached? %>
+                <h2><%= artwork.title %></h2>
+                <p><%= number_to_currency(artwork.price / 100.0) %></p>
+            </div> 
+        </div>
     
     <% end %>
 
