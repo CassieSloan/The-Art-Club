@@ -1,17 +1,7 @@
 
 <div id="nav_bar">
+    <!--mobile dropdown menu -->
     <nav class="nav-flexbox">
-        <div class="search">
-            <input type="text" placeholder="Search"/>
-        </div>
-        <!--buttons for desktop (display off for phone) -->
-
-        <!-- <form action="/INSERTROUTE" class="desktop_nav">
-            <button>test</button>
-        </form> -->
-
-        <!--dropdown menu -->
-
         <div class="dropdown">
             <button class="dropbtn">Menu</button>
                 <div class="dropdown-content">
@@ -22,5 +12,42 @@
                     <a href="contact.html">Contact</a>
                 </div>
         </div>
+        <div class="search">
+            <input type="text" placeholder="Search"/>
+        </div>
     </nav>
+
+    <section class="desktop-nav">
+
+        <div class="nav-element">
+            <p><%= link_to "explore", explore_path,  :class => "link-to" %></p>
+        </div>
+        
+        <div class="nav-element">
+            <p><%= link_to "sell", sell_path,  :class => "link-to" %></p>
+        </div>
+
+        <div class="nav-element">
+            <p><%= link_to "profile", profile_path,  :class => "link-to" %></p>
+        </div>
+
+        <div class="nav-element">
+            <p><%= link_to "contact", contact_path,  :class => "link-to" %></p>
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Search"/>
+        </div>
+
+    </section>
+
+
+
 </div>
+
+
+ <!--buttons for desktop (display off for phone) -->
+
+        <!-- <form action="/INSERTROUTE" class="desktop_nav">
+            <button>test</button>
+        </form> -->

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/", to: "pages#welcome", as: "welcome"
   get "/home", to: "pages#home", as: "home"
   get "/explore", to: "pages#explore", as: "explore"
+  # get "/learn", to: "pages#learn", as: "learn"
   get "/contact", to: "pages#contact", as: "contact"
 
   # explore results
@@ -27,7 +28,6 @@ Rails.application.routes.draw do
   get "/sell", to: "contents#new", as: "new_content"
   post "/sell", to: "contents#create"
   patch "/sell/:id", to: "contents#update"
-
 
 
   get "/profile", to: "pages#profile", as: "profile"
