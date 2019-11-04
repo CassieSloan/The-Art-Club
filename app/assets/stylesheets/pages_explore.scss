@@ -11,7 +11,7 @@
     h1 {
         color: #4DCCBD;
         text-align: center;
-        margin-top: 20%;
+        margin-top: 10%;
         font-size: 10vw;
 
     }
@@ -20,11 +20,10 @@
         color: rgb(255, 255, 255);
         font-family: 'Open Sans', sans-serif;
         font-weight: 800;
-        // letter-spacing: 0.075em;
         text-align: center;
-        vertical-align: middle;
         font-size: 5vw;
-
+        margin-top: 40%;
+        text-shadow: rgb(0, 0, 0) 2px 2px;
     }
 
     .flexbox {
@@ -32,80 +31,74 @@
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: 20%;
+        margin-top: 10%;
 
-            .medium-image {
-                width: 40vw;
-                height: 40vw;
-                background-image: image-url("paintbrushes_2.jpeg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                margin: 1vh;
-                text-decoration: none;
-                    &:hover {
-                        cursor: pointer;
-                    }
-            }
-            .genre-image {
-                width: 40vw;
-                height: 40vw;
-                background-image: image-url("comics.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                margin: 1vh;
-                    &:hover {
-                        cursor: pointer;
-                    }
-            }
+        .medium-image {
+            width: 40vw;
+            height: 40vw;
+            background-image: image-url("paintbrushes_2.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 1vh;
+            text-decoration: none;
+                &:hover {
+                    cursor: pointer;
+                }
+        }
+        .genre-image {
+            width: 40vw;
+            height: 40vw;
+            background-image: image-url("comics.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 1vh;
+                &:hover {
+                    cursor: pointer;
+                }
+        }
 
-            .artist-image {
-                width: 40vw;
-                height: 40vw;
-                background-image: image-url("paintman.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                margin: 1vh;
-                    &:hover {
-                        cursor: pointer;
-                    }
+        .artist-image {
+            width: 40vw;
+            height: 40vw;
+            background-image: image-url("paintman.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 1vh;
+                &:hover {
+                    cursor: pointer;
+                }
 
-            }
-            .all-image {
-                width: 40vw;
-                height: 40vw;
-                background-image: image-url("paint_on_canvas.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                margin: 1vh;
-                    &:hover {
-                        cursor: pointer;
-                    }
-
-            }
+        }
+        .all-image {
+            width: 40vw;
+            height: 40vw;
+            background-image: image-url("paint_on_canvas.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 1vh;
+                &:hover {
+                    cursor: pointer;
+                }
+        }
+        .link-to {
+            text-decoration: none;
+        }
+            
     }
     
 }
         //breakpoints
 
-        @media screen and (min-width: 400px) {
-            .desktop_nav{
-                display: block;
-            }
-            .flexbox {
-                display: inline-block;
-                    .medium-image {
-                        width: 10px;
-                        height: 10px;
-                    }
-            }
-        }
-        @media screen and (min-width: 600px) {
-            .desktop_nav{
-                display: block;
-            }
-            .flexbox {
-                display: inline-block;
-
-            }
-        }
+@media screen and (min-width: 400px) {
+    #explore-page {
+        background-color: red;
+        // .flexbox {
+        //         .medium-image {
+        //             max-width: 20vw;
+        //             max-height: 20vw;
+        //         }
+        // }
+    }
+}
+        
             

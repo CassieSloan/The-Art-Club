@@ -2,15 +2,6 @@
     
     background-color: red;
     height: 100vh;
-    
-    .nav_bar {
-        width: 100%;
-        margin-top: 5%;
-
-        .desktop_nav {
-            display: none;
-            }
-    }
 
     .buy-image {
         background-image: image-url("buy-image.jpg");
@@ -25,7 +16,5 @@
 
         //breakpoints
         @media screen and (min-width: 320px) {
-        .desktop_nav{
-            display: block;
-        }
+        
         }
