@@ -1,7 +1,7 @@
 #results {
     background-color: #4DCCBD;
     width: 100%;
-    
+
     // sub catagory nav bar
     .category-search {
         background-color: #FF8484;
@@ -42,16 +42,15 @@
     .flexbox {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: space-around;
         flex-wrap: wrap;
+        margin: 5%;
+        width: 100vw;
             
         
-        .listings {
-            display: inline;
-            text-align: center;
-            img {
-                width: 30vw;
-            }
+        img {
+            width: 40vw;
         }
 
     }
