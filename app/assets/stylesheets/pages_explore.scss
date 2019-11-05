@@ -7,9 +7,8 @@
     h1 {
         color: #4DCCBD;
         text-align: center;
-        margin-top: 10%;
-        font-size: 50px;
-
+        // margin-top: 10%;
+        // font-size: 50px;
     }
 
     p {
@@ -17,7 +16,6 @@
         font-family: 'Open Sans', sans-serif;
         font-weight: 800;
         text-align: center;
-        font-size: 5vw;
         margin-top: 40%;
         text-shadow: rgb(0, 0, 0) 2px 2px;
     }
@@ -27,11 +25,11 @@
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: 10%;
+        margin-bottom: 10%;
 
         .medium-image {
-            width: 40vw;
-            height: 40vw;
+            width: 150px;
+            height: 150px;
             background-image: image-url("paintbrushes_2.jpeg");
             background-size: cover;
             background-repeat: no-repeat;
@@ -42,8 +40,8 @@
                 }
         }
         .genre-image {
-            width: 40vw;
-            height: 40vw;
+            width: 150px;
+            height: 150px;
             background-image: image-url("comics.jpg");
             background-size: cover;
             background-repeat: no-repeat;
@@ -54,8 +52,8 @@
         }
 
         .artist-image {
-            width: 40vw;
-            height: 40vw;
+            width: 150px;
+            height: 150px;
             background-image: image-url("paintman.jpg");
             background-size: cover;
             background-repeat: no-repeat;
@@ -66,8 +64,8 @@
 
         }
         .all-image {
-            width: 40vw;
-            height: 40vw;
+            width: 150px;
+            height: 150px;
             background-image: image-url("paint_on_canvas.jpg");
             background-size: cover;
             background-repeat: no-repeat;
@@ -85,15 +83,122 @@
 }
         //breakpoints
 
-@media screen and (min-width: 400px) {
-    #explore-page {
-        background-color: red;
-        // .flexbox {
-        //         .medium-image {
-        //             max-width: 20vw;
-        //             max-height: 20vw;
-        //         }
-        // }
+@media screen and (min-width: 450px) {
+    #explore_page {
+        .flexbox {
+            .medium-image {
+                width: 200px;
+                height: 200px;
+            }
+            .genre-image {
+                width: 200px;
+                height: 200px;
+            }
+            .artist-image {
+                width: 200px;
+                height: 200px;
+            }
+            .all-image {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 620px) {
+    #explore_page {
+        .flexbox {
+            .medium-image {
+                width: 230px;
+                height: 230px;
+            }
+            .genre-image {
+                width: 230px;
+                height: 230px;
+            }
+            .artist-image {
+                width: 230px;
+                height: 230px;
+            }
+            .all-image {
+                width: 230px;
+                height: 230px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 710px) {
+    #explore_page {
+        .flexbox {
+            .medium-image {
+                width: 150px;
+                height: 150px;
+            }
+            .genre-image {
+                width: 150px;
+                height: 150px;
+            }
+            .artist-image {
+                width: 150px;
+                height: 150px;
+            }
+            .all-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 850px) {
+    #explore_page {
+        .flexbox {
+            .medium-image {
+                width: 200px;
+                height: 200px;
+            }
+            .genre-image {
+                width: 200px;
+                height: 200px;
+            }
+            .artist-image {
+                width: 200px;
+                height: 200px;
+            }
+            .all-image {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+}
+        
+@media screen and (min-width: 1050px) {
+    #explore_page {
+        p {
+            font-size: 1.5em;
+        }
+        .flexbox {
+            .medium-image {
+                width: 250px;
+                height: 250px;
+            }
+            .genre-image {
+                width: 250px;
+                height: 250px;
+            }
+            .artist-image {
+                width: 250px;
+                height: 250px;
+            }
+            .all-image {
+                width: 250px;
+                height: 250px;
+            }
+        }
     }
 }
         
