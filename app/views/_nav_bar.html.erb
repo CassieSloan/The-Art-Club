@@ -13,7 +13,11 @@
                 </div>
         </div>
         <div class="search">
-            <input type="text" placeholder="   Search"/>
+            <%=form_with url: results_all_path, method: "get", local: true do |form|%>
+            <%= form.label :search %>
+            <%= form.text_field :search%>
+            <%= form.submit "Search" %>
+            <%end%>
         </div>
     </nav>
 
@@ -36,7 +40,13 @@
         </div>
 
         <div class="search">
-            <input type="text" placeholder="   Search"/>
+                    <div class="search">
+            <%=form_with url: results_all_path, method: "get", local: true do |form|%>
+            <%= form.label :search %>
+            <%= form.text_field :search%>
+            <%= form.submit "Search" %>
+            <%end%>
+        </div>
         </div>
 
     </section>

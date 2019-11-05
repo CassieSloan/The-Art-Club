@@ -7,11 +7,19 @@ class PagesController < ApplicationController
     end
 
     def explore
-
     end
 
     def results_all
-        @artworks_all = Content.all #collects all artwork data and stores in instand variable @artworks_all
+        # @artworks_all = Content.all #collects all artwork data and stores in instand variable @artworks_all
+        search = params[:search].downcase
+        
+        if search
+            @artworks_all = Content.where("lower(title) LIKE ?", "%#{search}%")
+
+        else 
+            @artworks_all = Content.all
+        end
+        
     end
 
     def show
@@ -32,9 +40,5 @@ class PagesController < ApplicationController
     # def artwork_params
     #     params.require(:listing).permit(:title, :price, :genre, :medium)
     # end
-
-
-
-
 
 end

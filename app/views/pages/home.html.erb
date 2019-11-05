@@ -1,26 +1,35 @@
-
 <div id="home_page">
 
     <%= render "/nav_bar" %>
 
     <!--pictures and paras -->
     <main>     
-        <h1>Buy!<h1>
+        <h1>BUY!<h1>
         <div class="buy-image"></div>
-        <p>
+        <h6>
             Topping gummies marzipan powder chocolate gummies ice cream. Lollipop macaroon sesame snaps chocolate cake chupa chups cookie. Fruitcake cheesecake liquorice. Sweet powder chupa chups. Cheesecake topping liquorice chocolate macaroon jelly-o. Fruitcake biscuit macaroon toffee gummies marzipan pie. Bonbon sesame snaps cheesecake lemon drops marshmallow.
-        </p>
+        </h6>
+        <p><%= link_to "explore", explore_path, :class => "link-to"%></p>
+        <h6>____________________________________________________________________</h6>
 
-        <h1>Sell!<h1>
+
+
+        <h1>SELL!<h1>
         <div class="sell-image"></div>
-        <p>
+        <h6>
             Topping gummies marzipan powder chocolate gummies ice cream. Lollipop macaroon sesame snaps chocolate cake chupa chups cookie. Fruitcake cheesecake liquorice. Sweet powder chupa chups. Cheesecake topping liquorice chocolate macaroon jelly-o. Fruitcake biscuit macaroon toffee gummies marzipan pie. Bonbon sesame snaps cheesecake lemon drops marshmallow.
-        </p>
+        </h6>
+        <p><%= link_to "sell", sell_path, :class => "link-to"%></p>
+        <h6>____________________________________________________________________</h6>
 
-        <h1>Learn!<h1>
+
+        <h1>LEARN!<h1>
         <div class="learn-image"></div>
-        <p>
+        <h6>
             Topping gummies marzipan powder chocolate gummies ice cream. Lollipop macaroon sesame snaps chocolate cake chupa chups cookie. Fruitcake cheesecake liquorice. Sweet powder chupa chups. Cheesecake topping liquorice chocolate macaroon jelly-o. Fruitcake biscuit macaroon toffee gummies marzipan pie. Bonbon sesame snaps cheesecake lemon drops marshmallow.
-        </p>
+        </h6>
+        <p><%= link_to "learn", home_path, :class => "link-to"%></p>
+
+
     </main>
 </div>

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get "/results/mediums", to: "mediums#index", as: "mediums"
   get "/results/mediums/:id", to: "mediums#filter", as: "medium"
   get "/results/artists", to: "artists#index", as: "artists"
+  get "/contents", to: "contents#index", as: "contents"
 
   # buy page (when artwork clicked on)
   get "/results/:id/:id/:id", to: "pages#show", as: "artwork"
