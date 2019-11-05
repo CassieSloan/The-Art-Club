@@ -1,5 +1,7 @@
 class ContentsController < ApplicationController
 
+    before_action :authenticate_user!
+
     def new
         @artwork = Content.new
         @genres = Genre.all
@@ -7,6 +9,7 @@ class ContentsController < ApplicationController
     end
 
     def create
+
         @artwork = current_user.contents.create(content_params)
         
         if @artwork.errors.any?
