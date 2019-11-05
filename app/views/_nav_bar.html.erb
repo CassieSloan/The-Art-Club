@@ -1,6 +1,8 @@
 
 <div id="nav_bar">
+
     <!--mobile dropdown menu -->
+
     <nav class="nav-flexbox">
         <div class="dropdown">
             <button class="dropbtn">Menu</button>
@@ -14,12 +16,13 @@
         </div>
         <div class="search">
             <%=form_with url: results_all_path, method: "get", local: true do |form|%>
-            <%= form.label :search %>
             <%= form.text_field :search%>
-            <%= form.submit "Search" %>
+            <%= form.submit "Search", class: "search-button" %>
             <%end%>
         </div>
     </nav>
+
+    <!-- desktop menu -->
 
     <section class="desktop-nav">
 
@@ -39,15 +42,15 @@
             <p><%= link_to "contact", contact_path,  :class => "link-to" %></p>
         </div>
 
-        <div class="search">
-                    <div class="search">
+        <div class="nav-element">
             <%=form_with url: results_all_path, method: "get", local: true do |form|%>
-            <%= form.label :search %>
             <%= form.text_field :search%>
-            <%= form.submit "Search" %>
+        </div>
+        
+        <div class="nav-element">
+            <%= form.submit "Search", class: "search-button"%>
+        </div>
             <%end%>
-        </div>
-        </div>
 
     </section>
 
