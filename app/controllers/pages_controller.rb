@@ -11,10 +11,10 @@ class PagesController < ApplicationController
 
     def results_all
         # @artworks_all = Content.all #collects all artwork data and stores in instand variable @artworks_all
-        search = params[:search].downcase
+        search = params[:search]
         
         if search
-            @artworks_all = Content.where("lower(title) LIKE ?", "%#{search}%")
+            @artworks_all = Content.where("lower(title) LIKE ?", "%#{search.downcase}%")
 
         else 
             @artworks_all = Content.all
