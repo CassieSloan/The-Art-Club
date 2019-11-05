@@ -43,32 +43,63 @@
         font-family: 'Open Sans', sans-serif;
         font-weight: 200;
         color: rgb(255, 255, 255);
+        width: 85vw;
+        margin: auto;
     }
 
-    p {
+    .p {
         font-family: 'Open Sans', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         background-color: #ff8484;
-        padding: 1vh 2vw;
+        padding: 0.01em;
         border-radius: 0.25em;
-        width: 10vw;
+        width: 100px;
         text-align: center;
         margin: auto;
+        margin-top: 3%;
+        margin-bottom: 3%;
         .link-to {
             text-decoration: none;
             color: rgb(255, 255, 255);
             text-shadow: grey 1px 1px;
             font-weight: 600;
+            margin: auto;
     
-            }
+        }
     }
-    
-        
-    
 }
 
-        //breakpoints
-        @media screen and (min-width: 320px) {
-        
+//breakpoints
+@media screen and (min-width: 500px) {
+    #home_page {
+        .buy-image {
+            width: 75%;
+            height: 7em;
         }
+        .sell-image {
+            width: 75%;
+            height: 7em;
+        }
+        .learn-image {
+            width: 75%;
+            height: 7em;
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #home_page {
+        .buy-image {
+            width: 75%;
+            height: 9em;
+        }
+        .sell-image {
+            width: 75%;
+            height: 9em;
+        }
+        .learn-image {
+            width: 75%;
+            height: 9em;
+        }
+    }
+}
