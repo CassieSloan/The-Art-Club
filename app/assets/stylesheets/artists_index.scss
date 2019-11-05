@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
 
-#results {
+#artist-index {
     background-color: #4DCCBD;
 
     // sub catagory nav bar
@@ -43,8 +43,8 @@
     .flexbox {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-around;
+        align-items: baseline;
+        justify-content: space-between;
         flex-wrap: wrap;
         margin: 5%;
         width: 85vw;
@@ -52,18 +52,25 @@
             
         img {
             width: 100px;
-            border: rgb(238, 238, 238) 8px solid;
+            // border: rgb(238, 238, 238) 8px solid;
             box-shadow: rgb(75, 75, 75) 3px 3px 5px;
+            border-radius: 100%;
+            margin: 0 1em 0 1em;
+            text-align: center;
         }
 
         h2 {
-            font-size: 100%;
             width: 100px;
             text-align: center;
             color: rgb(255, 255, 255);
+            margin: auto;
+            padding-top: 5%;
+            padding-bottom: 5%;
         }
         p {
             color: rgb(255, 255, 255);
+            width: 100px;
+            margin: auto;
         }
 
     }
@@ -73,12 +80,15 @@
 }
 //breakpoints
 @media screen and (min-width: 500px) {
-    #results {
+    #artist-index {
         .flexbox {
             img {
                 width: 200px;
             }
             h2 {
+                width: 200px;
+            }
+            p {
                 width: 200px;
             }
         }

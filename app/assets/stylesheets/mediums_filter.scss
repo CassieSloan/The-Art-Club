@@ -2,10 +2,8 @@
 
 #medium-filter {
     background-color: #4DCCBD;
-    width: 100%;
-    height: 100%;
 
-    // category scroll nav bar
+    // sub catagory nav bar
     .category-search {
         background-color: #FF8484;
         overflow: auto;
@@ -13,7 +11,6 @@
         width: 85vw;
         margin: auto;
         border-radius: 0.25em;
-        margin-top: 10%;
 
         .nav-element {
             display: inline-block;
@@ -24,46 +21,66 @@
 
             .link-to {
                 text-decoration: none;
-            }
-
-            p {
-                display: inline;
                 color: rgb(255, 255, 255);
-                font-family: 'Open Sans', sans-serif;
-                font-weight: 600;
-                text-decoration: none;
-                background-color:  rgb(214, 91, 91);
-                padding: 1vh 2vw;
-                border-radius: 0.25em;
             }
         }
+
+        p {
+            display: inline;
+            color: rgb(255, 255, 255);
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            background-color:  rgb(214, 91, 91);
+            padding: 1vh 2vw;
+            border-radius: 0.25em;
+            text-align: center;
+            
+        }
           
-    }
-
-    h2 {
-        font-size: 5vw;
-        color: rgb(255, 255, 255);
-    }
-
-    p {
-        color: rgb(255, 255, 255);
-        text-align: center;
     }
 
     .flexbox {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: space-around;
         flex-wrap: wrap;
-
-        .listings {
-            display: inline;
-            text-align: center;
-            img {
-                width: 30vw;
-            }
-        }
+        margin: 5%;
+        width: 85vw;
+        text-align: center;
             
+        img {
+            width: 100px;
+            border: rgb(238, 238, 238) 8px solid;
+            box-shadow: rgb(75, 75, 75) 3px 3px 5px;
+        }
+
+        h2 {
+            font-size: 100%;
+            width: 100px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        p {
+            color: rgb(255, 255, 255);
+        }
+
     }
 
+    
+    
+}
+//breakpoints
+@media screen and (min-width: 500px) {
+    #medium-filter {
+        .flexbox {
+            img {
+                width: 200px;
+            }
+            h2 {
+                width: 200px;
+            }
+        }
+    }
 }

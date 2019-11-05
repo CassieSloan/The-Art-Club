@@ -1,11 +1,24 @@
-<h1>this is the artists results!</h1>
+<main id="artist-index">
 
-<% @artists_all.each do |artist| %>
+    <%= render "/nav_bar" %>
 
-    <div>
-        <%= image_tag artist.pic if artist.pic.attached? %>
-        <h2><%= artist.username %></h2>
-        <p><%= artist.bio %></p>
+    <h1>Artists</h1>
+
+    <nav class="category-search">
+        <div class="nav-element">
+            <p><%= link_to "genre", genres_path,  :class => "link-to" %></p>
+            <p><%= link_to "artist", artists_path, :class => "link-to"%></p>
+            <p><%= link_to "medium", mediums_path, :class => "link-to"%></p>
+        </div>
+    </nav>    
+
+    <div class="flexbox">
+        <% @artists_all.each do |artist| %>
+            <div class="listings">
+                <%= image_tag artist.pic if artist.pic.attached? %>
+                <h2><%= artist.username %></h2>
+                <p><%= artist.bio %></p>
+            </div>
+        <% end %>
     </div>
-    
-    <% end %>
+</main>        
