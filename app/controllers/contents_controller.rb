@@ -41,7 +41,7 @@ class ContentsController < ApplicationController
     end
 
     def new
-        @artwork = Content.new
+        @content = Content.new
         @genres = Genre.all
         @mediums = Medium.all
     end
@@ -51,12 +51,13 @@ class ContentsController < ApplicationController
         @artwork = Content.new(content_params)
         @artwork.user_id = current_user.id
         
-        if @artwork.errors.any?
+        if @artwork.save
+            redirect_to artwork_path(@artwork)
+        else 
+            @content = Content.new
             @genres = Genre.all
             @mediums = Medium.all 
             render "new"
-        else 
-            redirect_to artwork_path(params[:id])
         end
     end
 
@@ -76,7 +77,7 @@ class ContentsController < ApplicationController
     end
 
     def destroy
-        
+        @content.destroy
     end
 
     def set_user_content
@@ -88,7 +89,11 @@ class ContentsController < ApplicationController
     end
 
     def content_params
-        params.require(:content).permit(:title, :price, :genre, :medium, :pic[])
+        params.require(:content).permit(:title, :price, :pic, genre_ids:[], medium_ids:[])
     end
+
+    def translate_params
+        params[:content][:price] = (params[:content][:price].to_f * 100).to_i
+      end
 
 end

@@ -1,27 +1,51 @@
 <div id="show">
     <%= render "/nav_bar" %>
+    <!-- artwork image -->
+    <div class="artwork-image">
+        <%= image_tag @content.pic if @content.pic.attached? %>
+    </div>
 
-    <h1> this is the singular result page </h1>
-
-    <%= image_tag @content.pic if @content.pic.attached? %>
-
-    <p>
-    Title:
+    <h2>
     <%= @content.title %>
-    </p>
+    </h2>
 
-    <p>
-    Price:
-    <%= @content.price %>
-    <% unless @content.order %>
-        <button data-stripe="buy">Buy Now!</button>
-    <% end %>
-    </p>
+    <!-- artwork deets -->
+    <section class="artwork-details">
+        <p>
+            Price:
+            <%= @content.price %>
+            <% unless @content.order %>
+                <button data-stripe="buy">Buy Now!</button>
+            <% end %>
+        </p>
 
-    <p>
-    Artist:
-    <%= @content.user.username %>
-    </p>
+        <p>
+            Artist:
+            <%= @content.user.username %>
+        </p>
+
+        <p>
+            Genre:
+            <% @content.genres do |genre| %>
+                <% if @content.genres == 0 %>
+                <p> None listed </p>
+                <%else%>
+                <%= genre.title %>
+                <%end%>
+            <%end %>
+        </p>
+
+        <p>
+            Medium:
+            <% @content.mediums do |genre| %>
+                <% if @content.mediums == 0 %>
+                <p> None listed </p>
+                <%else%>
+                <%= medium.material %>
+                <%end%>
+            <%end %>
+        </p>
+    </section>
 
     <%= link_to 'Edit', edit_artwork_path(@content) %> |
     <%= link_to 'Back', results_all_path %>
@@ -30,7 +54,7 @@
 
     <script>
         document.querySelector("[data-stripe='buy']").addEventListener("click", () => {
-            const stripe = Stripe("<%= Rails.application.credentials.dig(:stripe, :public) %>");
+            const stripe = Stripe("<%= Rails.application.credentials.dig(:stripe, :public_key) %>");
             
             stripe.redirectToCheckout({
             sessionId: "<%= @session_id %>"

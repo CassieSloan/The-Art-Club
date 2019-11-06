@@ -1,11 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
 #show {
-    img {
+    background-color: #4DCCBD;
+
+    .artwork-image {
         text-align: center;
+    
+    }
+
+    .artwork-details {
+        width: 85vw;
+        margin: auto;
+    }
+
+    img {
+        border: rgb(238, 238, 238) 8px solid;
+        box-shadow: rgb(75, 75, 75) 3px 3px 5px;
+        width: 200px;
+    }
+
+    h2 {
+        color: rgb(255, 255, 255);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        width: 200px;
+        margin: auto;
+        margin-top: 5%;
+
     }
 
     p {
         text-align: left;
         margin: auto;
+        color: rgb(255, 255, 255);
+        width: 200px;
+        margin-top: 5%;
+
+
+
     }
 }
 

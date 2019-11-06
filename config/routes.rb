@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   post "/webhook", to: "orders#webhook", as: "order"
   #sell
   get "/sell", to: "contents#new", as: "new_content"
-  post "/sell", to: "contents#create"
+  post "/contents", to: "contents#create"
   patch "/sell/:id", to: "contents#update"
 
 
