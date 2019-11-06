@@ -23,8 +23,6 @@ Rails.application.routes.draw do
   get "/results/artwork/:id", to: "contents#show", as: "artwork"
   get "/results/artwork/:id/edit", to: "contents#edit", as: "edit_artwork"
 
-  #insert stripe/payment route here?
-
   #payment
   get "/payment-successful", to: "orders#success", as: "payment_success"
   post "/webhook", to: "orders#webhook", as: "order"

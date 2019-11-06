@@ -3,6 +3,11 @@
 #mediums-index {
     background-color: #4DCCBD;
 
+    .heading {
+        text-align: center;
+        color: white;
+    }
+
     // sub catagory nav bar
     .category-search {
         background-color: #FF8484;
@@ -35,7 +40,6 @@
             padding: 1vh 2vw;
             border-radius: 0.25em;
             text-align: center;
-            
         }
           
     }
