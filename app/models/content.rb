@@ -6,4 +6,5 @@ class Content < ApplicationRecord
   has_many :contents_mediums
   has_many :mediums, through: :contents_mediums
   has_one_attached :pic
+  has_one :order
 end
