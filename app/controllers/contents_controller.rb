@@ -17,11 +17,12 @@ class ContentsController < ApplicationController
     end
     
     def show
+        @content = Content.find_by_id(params[:id])
+        
         session = Stripe::Checkout::Session.create(
             payment_method_types: ['card'],
             line_items: [{
-                name: @content.name,
-                description:@content.description,
+                name: @content.title,
                 amount: @content.price,
                 currency: 'aud',
                 quantity: 1,

@@ -15,7 +15,6 @@ class PagesController < ApplicationController
         
         if search
             @artworks_all = Content.where("lower(title) LIKE ?", "%#{search.downcase}%")
-
         else 
             @artworks_all = Content.all
         end

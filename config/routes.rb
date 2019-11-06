@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   # buy page (when artwork clicked on)
   get "/results/:id/:id/:id", to: "contents#show", as: "artwork"
+  get "/results/:id/:id/:id/edit", to: "contents#edit", as: "edit_artwork"
+
   #insert stripe/payment route here?
 
   #payment

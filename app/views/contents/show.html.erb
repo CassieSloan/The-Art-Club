@@ -3,6 +3,39 @@
 
     <h1> this is the singular result page </h1>
 
+    <p>
+    Title:
+    <%= @content.title %>
+    </p>
+
+
+    <p>
+    Price:
+    <%= @content.price %>
+    <% unless @content.order %>
+        <button data-stripe="buy">Buy Now!</button>
+    <% end %>
+    </p>
+
+    <p>
+    User:
+    <%= @content.user.username %>
+    </p>
+
+    <%= link_to 'Edit', edit_artwork_path(@content) %> |
+    <%= link_to 'Back', results_all_path %>
+
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script>
+        document.querySelector("[data-stripe='buy']").addEventListener("click", () => {
+            const stripe = Stripe("<%= Rails.application.credentials.dig(:stripe, :public) %>");
+            
+            stripe.redirectToCheckout({
+            sessionId: "<%= @session_id %>"
+            });
+        });
+    </script>
 
     <!-- icon linking to payment -->
     <!-- icon linking to DM -->
