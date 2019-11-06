@@ -22,9 +22,6 @@ class PagesController < ApplicationController
         
     end
 
-    def show
-    end
-
     def payment_success
     end
 

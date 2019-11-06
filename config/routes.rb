@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get "/contact", to: "pages#contact", as: "contact"
 
   # explore results
-  get "/results/all", to: "pages#results_all", as: "results_all"
+  get "/results/all", to: "contents#index", as: "results_all"
   get "/results/genres", to: "genres#index", as: "genres"
   get "/results/genres/:id", to: "genres#filter", as: "genre"
   get "/results/mediums", to: "mediums#index", as: "mediums"
@@ -20,11 +20,12 @@ Rails.application.routes.draw do
   get "/contents", to: "contents#index", as: "contents"
 
   # buy page (when artwork clicked on)
-  get "/results/:id/:id/:id", to: "pages#show", as: "artwork"
+  get "/results/:id/:id/:id", to: "contents#show", as: "artwork"
   #insert stripe/payment route here?
 
   #payment
-  get "/payment-successful", to: "pages#payment_success", as: "payment_success"
+  get "/payment-successful", to: "orders#success", as: "payment_success"
+  post "/webhook", to: "orders#webhook", as: "order"
   #sell
   get "/sell", to: "contents#new", as: "new_content"
   post "/sell", to: "contents#create"
