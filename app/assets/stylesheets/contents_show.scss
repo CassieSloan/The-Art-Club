@@ -36,12 +36,36 @@
         width: 200px;
         margin-top: 5%;
 
+    }
 
+    button {
+        font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 1em;
+            text-decoration: none;
+            background-color: #ff8484;
+            padding: 1vh 2vw;
+            border-radius: 0.25em;
+            text-align: center;
+            color: rgb(255, 255, 255);
 
     }
 }
 
 //breakpoints
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 500px) {
+    #show {
+        img {
+            width: 300px;
+        }
+        h2 {
+            font-size: 2em;
+            width: 300px;
+        }
+        p {
+            font-size: 1.5em;
+            width: 300px;
+        }
+    }
 
 }
