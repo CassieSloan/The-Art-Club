@@ -1,7 +1,7 @@
 class ContentsController < ApplicationController
 
     before_action :set_user_content, only: [:edit, :update, :delete]
-    before_action :authenticate_user!, #only: [:new, :create. :edit, :update, :destroy]
+    before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
 
     def index
@@ -18,7 +18,7 @@ class ContentsController < ApplicationController
     
     def show
         @content = Content.find_by_id(params[:id])
-        
+
         session = Stripe::Checkout::Session.create(
             payment_method_types: ['card'],
             line_items: [{

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   
   #standard pages
   
-  get "/", to: "pages#welcome", as: "welcome"
+  get "/", to: "pages#welcome", as: "root"
   get "/home", to: "pages#home", as: "home"
   get "/explore", to: "pages#explore", as: "explore"
   # get "/learn", to: "pages#learn", as: "learn"
@@ -20,8 +20,8 @@ Rails.application.routes.draw do
   get "/contents", to: "contents#index", as: "contents"
 
   # buy page (when artwork clicked on)
-  get "/results/:id/:id/:id", to: "contents#show", as: "artwork"
-  get "/results/:id/:id/:id/edit", to: "contents#edit", as: "edit_artwork"
+  get "/results/artwork/:id", to: "contents#show", as: "artwork"
+  get "/results/artwork/:id/edit", to: "contents#edit", as: "edit_artwork"
 
   #insert stripe/payment route here?
 

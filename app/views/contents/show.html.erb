@@ -3,11 +3,12 @@
 
     <h1> this is the singular result page </h1>
 
+    <%= image_tag @content.pic if @content.pic.attached? %>
+
     <p>
     Title:
     <%= @content.title %>
     </p>
-
 
     <p>
     Price:
@@ -18,7 +19,7 @@
     </p>
 
     <p>
-    User:
+    Artist:
     <%= @content.user.username %>
     </p>
 
