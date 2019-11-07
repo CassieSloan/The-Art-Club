@@ -77,6 +77,7 @@ class ContentsController < ApplicationController
     end
 
     def destroy
+        @content =  current_user.contents.find_by_id(params[:id])
         @content.destroy
     end
 
