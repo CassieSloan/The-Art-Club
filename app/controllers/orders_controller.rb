@@ -17,3 +17,5 @@ class OrdersController < ApplicationController
             stripe_id: payment_id
         )
     end
+
+end
