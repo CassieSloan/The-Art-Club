@@ -2,7 +2,7 @@
     <div class="flexbox">
         <% @artworks_all.each do |artwork| %>
             <div class="listings">
-                <%=link_to artwork_path(artwork), class: "link-to" do %>
+                <%=link_to content_path(artwork), class: "link-to" do %>
                     <%= image_tag artwork.pic if artwork.pic.attached? %>
                     <h2>
                     <%= artwork.title %>

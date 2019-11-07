@@ -6,36 +6,6 @@
         <h1> got artwork to sell? do it here! </h1>
     </div>
 
-    <%= form_with model: @content, local: true do |form| %>
-        <!-- image upload -->
-        <div class="pic-upload">
-            <%= form.file_field :pic, accept: "image/png,image/gif,image/jpeg,image/jpg", class: "upload" %>
-        </div>
-        <!-- text input -->
-        <div class="text-field">
-            <%= form.text_field :title, placeholder: "title" %>
-        </div>
-
-        <div class="text-field">
-            <%= form.number_field :price, min: 0, placeholder: "price (in cents)" %>
-        </div>
-        <!-- checkboxes -->
-        <div>
-            <h3><%= form.label "Select Genre" %></h3>
-            <section class="checkbox">
-                <%= form.collection_check_boxes :genre_ids, @genres, :id, :title%>
-            </section>
-        </div>
-            <h3><%= form.label "Select Medium" %></h3>
-            <section class="checkbox">
-                <%= form.collection_check_boxes :medium_ids, @mediums, :id, :material%>
-            </section>
-
-        </div>
-        
-        <div class="submit">
-        <%= form.submit%>
-        </div>
-    <% end %>
+    <%= render "/form" %>
 
 </main>

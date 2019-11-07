@@ -3,7 +3,6 @@ class ContentsController < ApplicationController
     before_action :set_user_content, only: [:edit, :update, :delete]
     before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
-
     def index
         # @artworks_all = Content.all #collects all artwork data and stores in instand variable @artworks_all
         search = params[:search]
@@ -52,7 +51,7 @@ class ContentsController < ApplicationController
         @artwork.user_id = current_user.id
         
         if @artwork.save
-            redirect_to artwork_path(@artwork)
+            redirect_to content_path(@artwork)
         else 
             @content = Content.new
             @genres = Genre.all
@@ -63,12 +62,13 @@ class ContentsController < ApplicationController
 
     def edit
         @genres = Genre.all
-        @mediums = Medium.all    
+        @mediums = Medium.all  
+        # @content = Content.update(content_params)
     end
 
     def update        
         if @content.update(content_params)
-            redirect_to artwork_path(params[:id])
+            redirect_to content_path(params[:id])
         else
             @genres = Genre.all
             @mediums = Medium.all             
@@ -81,7 +81,7 @@ class ContentsController < ApplicationController
     end
 
     def set_user_content
-        @content =  current_user.content.find_by_id(:params[:id])
+        @content =  current_user.contents.find_by_id(params[:id])
 
         if @content == nil
             redirect_to results_all_path
@@ -94,6 +94,6 @@ class ContentsController < ApplicationController
 
     def translate_params
         params[:content][:price] = (params[:content][:price].to_f * 100).to_i
-      end
+    end
 
 end

@@ -50,7 +50,8 @@
         </p>
     </section>
 
-    <%= link_to 'Edit', edit_artwork_path(@content) %> |
+    <%= link_to 'Edit', edit_content_path(@content) if user_signed_in? and @content.user_id == current_user.id %>
+    <%= link_to 'Destroy', @content, method: :delete, data: { confirm: 'Are you sure?' } if user_signed_in? and @content.user_id == current_user.id %>
     <%= link_to 'Back', results_all_path %>
 
     <script src="https://js.stripe.com/v3/"></script>

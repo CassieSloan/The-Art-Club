@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "/", to: "pages#welcome", as: "root"
   get "/home", to: "pages#home", as: "home"
   get "/explore", to: "pages#explore", as: "explore"
-  # get "/learn", to: "pages#learn", as: "learn"
+  # get "/learn", to: "pages#learn", as: "learn" #this was a sprinkle
   get "/contact", to: "pages#contact", as: "contact"
 
   # explore results
@@ -20,16 +20,18 @@ Rails.application.routes.draw do
   get "/contents", to: "contents#index", as: "contents"
 
   # buy page (when artwork clicked on)
-  get "/results/artwork/:id", to: "contents#show", as: "artwork"
-  get "/results/artwork/:id/edit", to: "contents#edit", as: "edit_artwork"
+  get "/results/artwork/:id", to: "contents#show", as: "content"
+  get "/sell", to: "contents#new", as: "new_content"
+  post "/contents", to: "contents#create"
+  get "/results/artwork/:id/edit", to: "contents#edit", as: "edit_content"
+  patch "/results/artwork/:id", to: "contents#update"
+  delete "/results/artwork/:id", to: "contents#destroy", as: "delete_content"
+
 
   #payment
   get "/payment-successful", to: "orders#success", as: "payment_success"
   post "/webhook", to: "orders#webhook", as: "order"
   #sell
-  get "/sell", to: "contents#new", as: "new_content"
-  post "/contents", to: "contents#create"
-  patch "/sell/:id", to: "contents#update"
 
 
   get "/profile", to: "pages#profile", as: "profile"
