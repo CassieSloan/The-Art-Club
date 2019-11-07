@@ -6,5 +6,6 @@ class User < ApplicationRecord
   has_many :contents
   has_one_attached :pic
   has_many :orders
+  has_one_attached :bio
 
 end

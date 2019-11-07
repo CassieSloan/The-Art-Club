@@ -1,0 +1,48 @@
+<div id="profile">
+
+    <%= render "/nav_bar" %>
+
+    <!-- if current_user.pic_attached? show pic
+            else render upload form  -->
+
+    <img src="https://cdn1.iconfinder.com/data/icons/flat-character-color-1/60/flat-design-character_6-512.png">
+    <!-- image uploaded by user or default image -->
+    
+    <div class="profile-picture">
+        <%= image_tag user.pic if user.pic.attached? %>
+    </div>
+
+    <h1> **current_user.username** </h1>
+    <p> 
+        **current_user bio**
+        <!-- if current_user.bio_attached? show bio
+            else render upload form  -->
+        Pie pastry wafer liquorice chocolate cake. Bear claw soufflé apple pie lemon drops dessert jujubes tiramisu. Sesame snaps apple pie croissant. Sweet roll icing sweet roll cupcake. Lollipop tiramisu danish macaroon jelly
+    </p>
+
+    <button>tutorials</button> 
+    <button>donate</button>
+    <button>subscribe</button>
+
+    <!-- then feed of Content uploaded with titles and prices -->
+    <div class="user-art">
+        <h2>**user artworks list**</h2>
+
+            <div class="flexbox">
+                <% @user_content.each do |artwork| %>
+                    <div class="listings">
+                        <%=link_to content_path(artwork), class: "link-to" do %>
+                            <%= image_tag artwork.pic if artwork.pic.attached? %>
+                            <h2>
+                            <%= artwork.title %>
+                            </h2>
+                            <p><%= number_to_currency(artwork.price / 100.0) %></p>
+                        <%end%>
+                    </div> 
+                <% end %>
+            </div>
+
+    </div>
+</div>
+
+
