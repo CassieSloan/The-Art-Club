@@ -1,5 +1,8 @@
 <div id="show">
     <%= render "/nav_bar" %>
+
+    <%= render "/back_button" %>
+
     <!-- artwork image -->
     <div class="artwork-image">
         <%= image_tag @content.pic if @content.pic.attached? %>
