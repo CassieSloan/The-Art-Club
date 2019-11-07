@@ -8,8 +8,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        left: 0;
-        margin: 5% 10% 0% 10%;
+        margin: 0% 7.5% 0% 7.5%;        
         width: 85vw;
         
         input {
@@ -79,9 +78,10 @@
     .desktop-nav {
         display: none;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
-        margin: 0% 10% 0% 10%;
+        width: 85vw;
+        margin: 0% 7.5% 0% 7.5%;
         
         .nav-element {
         display: inline-block;
@@ -107,8 +107,9 @@
             background-color: #ff8484;
             padding: 1vh 2vw;
             border-radius: 0.25em;
-            width: 3em;
+            width: 4em;
             text-align: center;
+            
         }
 
         input {
@@ -118,12 +119,15 @@
             font-family: 'Open Sans', sans-serif;
             color: rgb(0, 0, 0);
             margin: 0.25em;
+            padding: 1vh 2vw;
+
 
         }
         .search-button {
             background-color:#ff8484;
             color: rgb(255, 255, 255);
             margin: 0.25em;
+            padding: 1vh 2vw;
 
         }
     }
