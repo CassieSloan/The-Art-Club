@@ -63,7 +63,6 @@ class ContentsController < ApplicationController
     def edit
         @genres = Genre.all
         @mediums = Medium.all  
-        # @content = Content.update(content_params)
     end
 
     def update        
