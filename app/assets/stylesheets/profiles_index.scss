@@ -4,7 +4,30 @@
     background-color: rgb(255, 227, 194);
 
     .profile-picture {
+        
+        .place-holder {
+        background-image: url("https://cdn1.iconfinder.com/data/icons/flat-character-color-1/60/flat-design-character_6-512.png");
+        background-size: cover;
+        background-repeat: no-repeat;
         text-align: center;
+        border-radius: 1em;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        }
+
+        .pic-div {
+            margin: auto;
+            width: 200px;
+
+            .user-pic {
+                border-radius: 100%;
+                width: 200px;
+                height: 200px;
+                box-shadow: grey 3px 3px 5px;
+
+            }
+        }
     }
     h1 {
         color: #FF8484;
@@ -19,6 +42,42 @@
     text-align: center;    
     margin-top: 10%;
     width: 10%;
+    }
+
+    .flexbox {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 5%;
+        width: 85vw;
+        text-align: center;
+            
+        img {
+            width: 200px;
+            border: rgb(238, 238, 238) 8px solid;
+            box-shadow: rgb(75, 75, 75) 3px 3px 5px;
+        }
+
+        h2 {
+            font-size: 100%;
+            color: #FF8484;
+        }
+        p {
+            color: #FF8484;
+        }
+        .link-to {
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+    .user-art {
+
+        h2 {
+            margin-left: 10%;
+            color: #FF8484;
+        }
     }
 }
 

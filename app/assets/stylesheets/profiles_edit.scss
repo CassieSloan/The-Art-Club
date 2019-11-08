@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
+#profile-edit-page {  
+    background-color: #4DCCBD;
+
+    .heading {
+        text-align: center;
+        color: white;
+        margin: 0 10% 0 10%
+    }
+    .pic-upload { 
+        color: white;
+        text-align: center;
+        margin: 5%;
+        input {
+            color: rgb(255, 255, 255);
+            background-color: #4DCCBD;
+        }
+        .upload {
+            color: rgb(255, 255, 255);
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            background-color:  #FF8484;
+            padding: 1vh 2vw;
+            border-radius: 0.25em;
+            text-align: center;
+            width: 40%;
+        }
+    }
+
+    label {
+        color: white;
+    }
+    i {
+        color: white;
+    }
+
+    .text-field {
+        text-align: center;
+        margin: 5%;
+
+        input {
+            color: rgb(255, 255, 255);  
+            border: white 2px solid; 
+            border-radius: 0.25em;
+            background: #4DCCBD;
+            text-align: center;
+            padding: 1vh 2vw; 
+        }
+        textarea {
+            color: rgb(255, 255, 255);  
+            border: white 2px solid; 
+            border-radius: 0.25em;
+            background: #4DCCBD;
+            text-align: center;
+            padding: 1vh 2vw; 
+            height: 100px;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        color: white;
+        margin: 5%;
+    }
+
+    .checkbox {
+        width: 85vw;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: baseline;
+        color: rgb(255, 255, 255);
+
+        input {
+            margin: 1%;
+        }
+        label {
+            margin: 1%;
+        }
+    }
+    .submit {
+        text-align: center;
+
+        input {
+        color: rgb(255, 255, 255);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+        border: none;
+        background-color:  #FF8484;
+        padding: 1vh 2vw;
+        border-radius: 0.25em;
+        text-align: center;
+        margin: auto;
+        }
+    }
+    .cancel-button {
+        color: rgb(255, 255, 255);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+        border: none;
+        background-color:  #FF8484;
+        padding: 1vh 2vw;
+        border-radius: 0.25em;
+        text-align: center;
+        margin: auto;
+    }
+    p {
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    footer {
+        margin-bottom: 7.5%;
+    }
+    
+}  

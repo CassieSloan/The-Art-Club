@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 
   #PAYMENT
 
-  get "/payment-successful", to: "orders#success", as: "payment_success"
+  get "/orders/success", to: "orders#success", as: "payment_success"
   post "/webhook", to: "orders#webhook", as: "order"
 
  #PROFILE CRUD

@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
 
     def index
         @content = Content.all
-        # @user_content =  current_user.contents
+        @user_content = current_user.contents
     end
 
     def edit
@@ -13,7 +13,7 @@ class ProfilesController < ApplicationController
     end
 
     def update
-
+        redirect_to profile_path
     end
 
     def destory
