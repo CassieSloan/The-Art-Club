@@ -2,22 +2,29 @@
 
     <%= render "/nav_bar" %>
 
-    <!-- if current_user.pic_attached? show pic
-            else render upload form  -->
-
-    <img src="https://cdn1.iconfinder.com/data/icons/flat-character-color-1/60/flat-design-character_6-512.png">
     <!-- image uploaded by user or default image -->
     
     <div class="profile-picture">
-        <%= image_tag user.pic if user.pic.attached? %>
+        <% if current_user.pic.attached? %>
+            <%=image_tag current_user.pic%>
+        <% else %>
+            <div>
+                <img src="https://cdn1.iconfinder.com/data/icons/flat-character-color-1/60/flat-design-character_6-512.png"/>
+            </div>
+            <%= link_to "change display picture", edit_profile_path %>
+        <%end %>
     </div>
 
-    <h1> **current_user.username** </h1>
+    <h1> <%=current_user.username%> </h1>
+
     <p> 
-        **current_user bio**
-        <!-- if current_user.bio_attached? show bio
-            else render upload form  -->
-        Pie pastry wafer liquorice chocolate cake. Bear claw soufflé apple pie lemon drops dessert jujubes tiramisu. Sesame snaps apple pie croissant. Sweet roll icing sweet roll cupcake. Lollipop tiramisu danish macaroon jelly
+        <% if current_user.bio.attached? %>
+            <%=current_user.bio%>
+        <% else %>
+            <div>
+                <%= link_to "write a bio", edit_profile_path %>
+            </div>
+        <%end %>
     </p>
 
     <button>tutorials</button> 
@@ -26,7 +33,7 @@
 
     <!-- then feed of Content uploaded with titles and prices -->
     <div class="user-art">
-        <h2>**user artworks list**</h2>
+        <h2><%=current_user.name%>'s work</h2>
 
             <div class="flexbox">
                 <% @user_content.each do |artwork| %>

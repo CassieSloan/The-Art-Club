@@ -29,22 +29,22 @@
 
         <p>
             Genre:
-            <% @content.genres do |genre| %>
-                <% if @content.genres == 0 %>
+            <% if @content.genres.length == 0 %>
                 <p> None listed </p>
-                <%else%>
-                <%= genre.title %>
-                <%end%>
-            <%end %>
+            <%else%>
+                <% @content.genres.each do |genre| %>
+                    <%= genre.title %>
+                <%end %>
+            <%end%>
         </p>
 
         <p>
             Medium:
-            <% @content.mediums do |genre| %>
-                <% if @content.mediums == 0 %>
+            <% if @content.mediums.length == 0 %>
                 <p> None listed </p>
-                <%else%>
-                <%= medium.material %>
+            <%else%>
+                <% @content.mediums.each do |medium| %>
+                     <%= medium.material %>
                 <%end%>
             <%end %>
         </p>

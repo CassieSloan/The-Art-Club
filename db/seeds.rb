@@ -29,7 +29,6 @@ user_ids = User.all.pluck(:id)
 #     )
 # end
 
-
 # genres = Genre.all
 
 genres = [
@@ -120,7 +119,7 @@ if Medium.count == 0
     end
 end
 
-medium_ids = Medium.all.pluck(:id)
+mediums = Medium.all
 genres = Genre.all
 
 for i in 1..30
@@ -129,7 +128,6 @@ for i in 1..30
         price: rand(500..10000),
         title: Faker::Music.album,
         user_id: user_ids.sample,
-        medium_id: medium_ids.sample
     )
     
     temp_art_pic = Down.download(Faker::LoremPixel.image(category:"abstract"))
@@ -137,6 +135,7 @@ for i in 1..30
     
     3.times do 
         artwork.genres << genres.sample
+        artwork.mediums << mediums.sample
     end
     artwork.save!
     puts "created #{i} artwork"
