@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap');
+
 #payment-success {
     background-color: rgb(255, 227, 194);
     min-height: 100vh;
     h1 {
-
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        color: white;
+        text-shadow: rgb(61, 61, 61) 3px 2px 3px;
     }
 }
 

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Knewave&display=swap');
+
 
 #welcome_page {
 
@@ -16,6 +18,12 @@
         flex-direction: column;
         justify-content: center;
         flex-wrap: wrap;
+        align-content: center;
+
+        h3 {
+            margin: auto;
+            padding: 5%;
+        }
         
         .guest {
             margin: auto;
@@ -52,6 +60,7 @@
                 text-align: center;
                 margin-top: 5%;
             }
+            margin-bottom: 7.5%;
             
         }
         h3 {
@@ -65,7 +74,7 @@
     h1 {
         text-align: center;
         margin: 0;
-        font-family: 'Racing Sans One', cursive;
+        font-family: 'Knewave', cursive;
         color: rgb(255, 255, 255);
         text-shadow: black 2px 2px;
         letter-spacing: 0.075em;
