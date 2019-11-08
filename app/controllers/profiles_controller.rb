@@ -5,13 +5,15 @@ class ProfilesController < ApplicationController
 
     def index
         @content = Content.all
-        @user_content =  current_user.contents
+        # @user_content =  current_user.contents
     end
 
     def edit
+
     end
 
     def update
+
     end
 
     def destory
