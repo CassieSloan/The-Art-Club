@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
+#profile-show {
+    background-color: rgb(255, 227, 194);
+    min-width: 100%;
+    min-height: 100vh;
+
+    .profile-picture {
+        
+        text-align: center;
+        border-radius: 1em;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+
+        .pic-div {
+            margin: auto;
+            width: 200px;
+
+            .user-pic {
+                border-radius: 100%;
+                width: 200px;
+                height: 200px;
+                box-shadow: grey 3px 3px 5px;
+
+            }
+        }
+
+    }
+    h1 {
+        color: #FF8484;
+        text-align: center;
+    }
+    p {
+        color: #FF8484;
+        text-align: center;
+        margin: auto;
+
+    }
+    img {
+    text-align: center;    
+    margin-top: 10%;
+    width: 10%;
+    }
+
+    .flexbox {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 5%;
+        width: 85vw;
+        text-align: center;
+            
+        img {
+            width: 200px;
+            border: rgb(238, 238, 238) 8px solid;
+            box-shadow: rgb(75, 75, 75) 3px 3px 5px;
+        }
+
+        h2 {
+            font-size: 100%;
+            color: #FF8484;
+        }
+        p {
+            color: #FF8484;
+        }
+        .link-to {
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+    .user-art {
+
+        h2 {
+            margin-left: 10%;
+            color: #FF8484;
+        }
+    }
+    .line {
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+        width: 75%;
+        height: 1px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+//breakpoints
+@media screen and (min-width: 320px) {
+    
+}

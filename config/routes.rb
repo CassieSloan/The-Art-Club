@@ -37,6 +37,7 @@ Rails.application.routes.draw do
  #PROFILE CRUD
   get "/profile", to: "profiles#index", as: "profile"
   get "/profile/edit", to: "profiles#edit", as: "edit_profile"
+  get "/profile/:id", to: "artists#show", as: "profile_id"
   patch "/profile", to: "profiles#update"
   delete "/profile", to: "profiles#destroy", as: "delete_profile"
 

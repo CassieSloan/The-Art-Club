@@ -1,0 +1,39 @@
+<main id="profile-show">
+
+    <%= render "/nav_bar" %>
+
+    <div class="profile-picture">
+        <div class="pic-div"><%= image_tag @artist.pic, class: "user-pic" %></div>
+    </div>
+
+    <h1>
+        <%= @artist.name %>
+    </h1>
+
+    <p> 
+        <%=@artist.bio%>
+    </p>        
+
+    <div class="line"></div>
+
+    <div class="user-art">
+
+        <h2><%=@artist.name%>'s work</h2>
+
+            <div class="flexbox">
+                <% @artist_content.each do |artwork| %>
+                    <div class="listings">
+                        <%=link_to content_path(artwork), class: "link-to" do %>
+                            <%= image_tag artwork.pic if artwork.pic.attached? %>
+                            <h2>
+                            <%= artwork.title %>
+                            </h2>
+                            <p><%= number_to_currency(artwork.price / 100.0) %></p>
+                        <%end%>
+                    </div> 
+                <% end %>
+            </div>
+    </div>
+
+
+</main>

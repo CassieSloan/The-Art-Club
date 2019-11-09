@@ -21,9 +21,11 @@
     <div class="flexbox">
         <% @artists_all.each do |artist| %>
             <div class="listings">
+                <%=link_to profile_id_path(artist), class: "link-to" do %>
                 <%= image_tag artist.pic if artist.pic.attached? %>
                 <h2><%= artist.username %></h2>
                 <p><%= artist.bio %></p>
+                <%end%>
             </div>
         <% end %>
     </div>

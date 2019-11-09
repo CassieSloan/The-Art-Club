@@ -1,16 +1,22 @@
+#contact {
+    background-color: rgb(255, 227, 194);
+    min-height: 100vh;
 
+    h1 {
+        color: #4DCCBD;
+        text-align: center;
+    }
+
+    p {
+        color: #4DCCBD;
+        text-align: center;
+        margin: 0 10% 0 10%;
+    }
+}
 
 
 
 
 @media screen and (min-width: 600px) {
-    .desktop_nav{
-        display: block;
-    }
-    .flexbox {
-        display: inline-block;
-        div {
-            margin: 1%;
-        }
-    }
+
 }

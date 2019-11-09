@@ -8,6 +8,9 @@ class ProfilesController < ApplicationController
         @user_content = current_user.contents
     end
 
+    def show 
+        @user = User.find_by_id(params[:id])
+    end
     def edit
 
     end
