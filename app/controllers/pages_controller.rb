@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
 
     def welcome
+        if current_user == nil
+        else redirect_to home_path
+        end
     end
 
     def home
