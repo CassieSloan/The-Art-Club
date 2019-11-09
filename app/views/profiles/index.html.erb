@@ -14,6 +14,10 @@
         <%end %>
     </div>
 
+    <p class="button"><%= link_to 'logout', destroy_user_session_path, method: :delete, class: "log-out" %></p>
+
+
+
     <h1> <%=current_user.username%> </h1>
 
     <p> 

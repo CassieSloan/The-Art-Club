@@ -2,7 +2,6 @@
 
 #profile {
     background-color: rgb(255, 227, 194);
-    min-width: 100%;
     min-height: 100vh;
 
     .profile-picture {
@@ -39,7 +38,7 @@
             width: 6em;
             text-align: center;
             margin: auto;
-            margin-top: 5%;
+            margin-top: 1%;
             .edit-profile {
                 text-align: center;
                 font-family: 'Open Sans', sans-serif;
@@ -71,7 +70,7 @@
         align-items: flex-start;
         justify-content: space-around;
         flex-wrap: wrap;
-        margin: 5%;
+        padding: 5%;
         width: 85vw;
         text-align: center;
             
@@ -107,6 +106,25 @@
         height: 1px;
         margin-top: 5%;
         margin-bottom: 5%;
+    }
+    .button {
+            
+        text-decoration: none;
+        background-color:#4DCCBD;;
+        padding: 1vh 2vw;
+        border-radius: 0.25em;
+        width: 6em;
+        text-align: center;
+        margin: auto;
+        margin-top: 1%;
+        .log-out {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1em;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
     }
 }
 
