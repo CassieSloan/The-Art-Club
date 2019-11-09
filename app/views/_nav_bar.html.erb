@@ -7,6 +7,7 @@
         <div class="dropdown">
             <button class="dropbtn">Menu</button>
                 <div class="dropdown-content">
+                    <p><%= link_to "Home", home_path,  :class => "link-to" %></p>
                     <p><%= link_to "Explore", explore_path,  :class => "link-to" %></p>
                     <p><%= link_to "Sell", new_content_path,  :class => "link-to" %></p>
                     <p><%= link_to "Learn", home_path,  :class => "link-to" %></p>
@@ -19,15 +20,18 @@
             <%= form.text_field :search%>
         </div>
         
-        <div class="nav-element">
+        <!--<div class="nav-element">
             <%= form.submit "Search", class: "search-button"%>
-        </div>
+        </div> -->
             <%end%>
     </nav>
 
     <!-- desktop menu -->
 
     <section class="desktop-nav">
+        <div class="nav-element">
+            <p><%= link_to "Home", home_path,  :class => "link-to" %></p>
+        </div>
 
         <div class="nav-element">
             <p><%= link_to "explore", explore_path,  :class => "link-to" %></p>
@@ -50,12 +54,10 @@
             <%= form.text_field :search%>
         </div>
 
-        <div class="nav-element">
+        <!--<div class="nav-element">
             <%= form.submit "Search", class: "search-button"%>
-        </div>
+        </div> -->
             <%end%>
 
     </section>
-
-
 </div>

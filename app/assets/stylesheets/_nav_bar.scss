@@ -14,7 +14,7 @@
         input {
             border-radius: 0.25em;
             border: none;
-            width: 6em;
+            // width: 6em;
             font-family: 'Open Sans', sans-serif;
             color: rgb(0, 0, 0);
         }
@@ -96,7 +96,6 @@
             text-shadow: grey 1px 1px;
             font-weight: 600;
             text-align: center;
-
             }
         }
         p {
@@ -109,26 +108,22 @@
             border-radius: 0.25em;
             width: 4em;
             text-align: center;
-            
         }
 
         input {
             border-radius: 0.25em;
             border: none;
-            width: 6em;
+            width: 8em;
             font-family: 'Open Sans', sans-serif;
             color: rgb(0, 0, 0);
             margin: 0.25em;
             padding: 1vh 2vw;
-
-
         }
         .search-button {
             background-color:#ff8484;
             color: rgb(255, 255, 255);
             margin: 0.25em;
             padding: 1vh 2vw;
-
         }
     }
 }
