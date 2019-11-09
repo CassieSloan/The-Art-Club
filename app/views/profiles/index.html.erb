@@ -7,7 +7,7 @@
     <div class="profile-picture">
         <% if current_user.pic.attached? %>
             <div class="pic-div"><%=image_tag current_user.pic, class: "user-pic"%></div>
-            <div><%= link_to "edit profile", edit_profile_path %></div>
+            <p class="button"><%= link_to "edit profile", edit_profile_path, class: "edit-profile" %></p>
         <% else %>
             <div class="place-holder"></div>
                 <p><%= link_to "change display picture", edit_profile_path %></p>
@@ -23,6 +23,8 @@
             <%=current_user.bio%>
         <%end %>
     </p>
+
+    <div class="line"></div>
 
     <!-- then feed of Content uploaded with titles and prices -->
     <div class="user-art">

@@ -79,6 +79,31 @@
         border-radius: 0.25em;
         text-align: center;
         margin: auto;
+        margin-bottom: 7.5%;
+        margin-top: 2.5%;
         }
     }
 }  
+
+//breakpoints
+@media screen and (min-width: 600px) {
+    #sell-page {
+        .text-field {
+            text-align: center;
+            margin: 5%;
+    
+            input {
+                color: rgb(255, 255, 255);  
+                border: white 2px solid; 
+                border-radius: 0.25em;
+                background: #4DCCBD;
+                text-align: center;
+                padding: 1vh 2vw; 
+                width: 300px;
+            }
+        }
+        .checkbox {
+            width: 60vw;
+        }
+    }
+}

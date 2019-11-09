@@ -49,12 +49,12 @@
               </div>
 
               <div class="actions">
-                  <%= f.submit "Sign up" %>
+                  <p><%= f.submit "Sign up", class: "button" %></p>
               </div>
           <% end %>
 
           <%- if controller_name != 'sessions' %>
-          <%= link_to "Log in", new_session_path(resource_name) %><br />
+          <p><%= link_to "Log in", new_session_path(resource_name), class: "button"  %><br /></p>
           <% end %>
       </section>
 

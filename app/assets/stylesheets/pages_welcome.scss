@@ -19,10 +19,13 @@
         justify-content: center;
         flex-wrap: wrap;
         align-content: center;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 7.5%;
+
 
         h3 {
             margin: auto;
-            padding: 5%;
         }
         
         .guest {
@@ -56,13 +59,44 @@
 
             }
             // sign up button
-            .actions {
+            // .actions {
+
+            //     p {
+
+            //         text-align: center;
+            //         .button {
+            //         text-align: center;
+            //         color: rgb(255, 255, 255);
+            //         font-family: 'Open Sans', sans-serif;
+            //         font-weight: 600;
+            //         text-decoration: none;
+            //         background-color:  rgb(214, 91, 91);
+            //         padding: 1vh 2vw;
+            //         border-radius: 0.25em;
+            //         text-align: center;
+            //         border: none;
+            //         }
+            //     }   
+            
+            p {
+
                 text-align: center;
-                margin-top: 5%;
+                .button {
+                text-align: center;
+                color: rgb(255, 255, 255);
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 600;
+                text-decoration: none;
+                background-color:  rgb(214, 91, 91);
+                padding: 1vh 2vw;
+                border-radius: 0.25em;
+                text-align: center;
+                border: none;
+                }
             }
-            margin-bottom: 7.5%;
             
         }
+
         h3 {
             text-align: center;
             color: rgb(255, 255, 255);
@@ -111,12 +145,28 @@
 
         .flexbox {
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: center;
 
         }
         .signup {
             max-width: 30vw;
         }
+    }
+
+}
+@media screen and (min-width: 800px) {
+    #welcome_page {
+
+        .flexbox {
+            flex-direction: row;
+            justify-content: center;
+
+        }
+        .signup {
+            max-width: 20vw;
+            padding: 1%;
+        }
+
     }
 
 }

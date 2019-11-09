@@ -2,6 +2,8 @@
 
 #profile {
     background-color: rgb(255, 227, 194);
+    min-width: 100%;
+    min-height: 100vh;
 
     .profile-picture {
         
@@ -26,6 +28,25 @@
                 height: 200px;
                 box-shadow: grey 3px 3px 5px;
 
+            }
+        }
+        .button {
+            
+            text-decoration: none;
+            background-color:#4DCCBD;;
+            padding: 1vh 2vw;
+            border-radius: 0.25em;
+            width: 6em;
+            text-align: center;
+            margin: auto;
+            margin-top: 5%;
+            .edit-profile {
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 600;
+                font-size: 1em;
+                text-decoration: none;
+                color: rgb(255, 255, 255);
             }
         }
     }
@@ -79,11 +100,17 @@
             color: #FF8484;
         }
     }
+    .line {
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+        width: 75%;
+        height: 1px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
 }
 
 //breakpoints
 @media screen and (min-width: 320px) {
-    .desktop_nav{
-        display: block;
-    }
+    
 }
