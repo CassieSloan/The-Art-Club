@@ -44,7 +44,7 @@
                     <p> None listed </p>
                 <%else%>
                     <% @content.mediums.each do |medium| %>
-                        <%= medium.material%>
+                        <%= medium.material%>,
                     <%end%>
                 <%end %>
             </p>

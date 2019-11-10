@@ -1,5 +1,5 @@
 class Content < ApplicationRecord
-  validates :title, :genre, :medium, :price, :pic, presence: true
+  validates :title, :genres, :mediums, :price, :pic, presence: true
   belongs_to :user
   has_many :contents_genres, dependent: :destroy
   has_many :genres, through: :contents_genres
